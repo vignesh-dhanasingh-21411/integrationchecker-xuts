@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Integration Checker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔗 Product Integration Checker</h1>
+            <p>Check compatibility between your products</p>
+        </div>
+
+        <div class="selector-container">
+            <div class="product-selectors">
+                <!-- Product 1 -->
+                <div class="selector-group">
+                    <label>First Product</label>
+                    <div class="search-select" id="search-select-1">
+                        <input type="text" class="search-input"
+                               placeholder="Search or select a product..."
+                               autocomplete="off" data-product="1">
+                        <div class="dropdown-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                <path fill="#333" d="M6 9L1 4h10z"/>
+                            </svg>
+                        </div>
+                        <div class="options-list" id="options-list-1">
+                            <!-- Populated from config/products.js -->
+                        </div>
+                    </div>
+                    <div class="version-group">
+                        <button class="version-btn active" data-product="1" data-version="cloud">Cloud</button>
+                        <button class="version-btn" data-product="1" data-version="onprem">On-Premise</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="selector-group">
+                    <label>Second Product</label>
+                    <div class="search-select" id="search-select-2">
+                        <input type="text" class="search-input"
+                               placeholder="Search or select a product..."
+                               autocomplete="off" data-product="2">
+                        <div class="dropdown-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                <path fill="#333" d="M6 9L1 4h10z"/>
+                            </svg>
+                        </div>
+                        <div class="options-list" id="options-list-2">
+                            <!-- Populated from config/products.js -->
+                        </div>
+                    </div>
+                    <div class="version-group">
+                        <button class="version-btn active" data-product="2" data-version="cloud">Cloud</button>
+                        <button class="version-btn" data-product="2" data-version="onprem">On-Premise</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="check-btn" onclick="checkIntegration()">Check Integration</button>
+        </div>
+
+        <div class="results" id="results"></div>
+        <div class="feature-detail-page" id="featureDetail"></div>
+    </div>
+
+    <!-- ── Config files (edit these!) ── -->
+    <script src="config/products.js"></script>
+    <script src="config/integrations.js"></script>
+    <script src="config/feature-details.js"></script>
+
+    <!-- ── App logic (no need to edit) ── -->
+    <script src="js/app.js"></script>
+</body>
+</html>
