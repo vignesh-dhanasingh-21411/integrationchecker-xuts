@@ -100,7 +100,7 @@ const INTEGRATIONS = {
                 id: 'ec-op-sdp-auto-assign'
             },
             { 
-                name: 'Action to be performed on SDP asset when the asset is removed from SOM in Endpoint Central (Beta)',
+                name: 'Action to be performed on SDP asset when the asset is removed from SOM in Endpoint Central ',
                 id: 'ec-op-sdp-asset-removal-beta'
             },
             { 
@@ -117,9 +117,9 @@ const INTEGRATIONS = {
             }
         ],
         documentation: [
-            { title: 'EC On-Premise to SDP Cloud Integration', url: 'https://www.manageengine.com/products/desktop-central/ec-onprem-sdp-cloud.html' },
-            { title: 'Auto-assign Configuration', url: 'https://www.manageengine.com/products/desktop-central/auto-assign-users.html' },
-            { title: 'Alert Ticketing Setup', url: 'https://www.manageengine.com/products/desktop-central/alert-ticketing.html' }
+            { title: 'EC On-Premise to SDP Cloud Integration', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/integrating_with_servicedesk_plus_on_demand.html' },
+ //           { title: 'Auto-assign Configuration', url: 'https://www.manageengine.com/products/desktop-central/auto-assign-users.html' },
+ //           { title: 'Alert Ticketing Setup', url: 'https://www.manageengine.com/products/desktop-central/alert-ticketing.html' }
         ]
     },
     'endpoint-central-onprem_servicedesk-plus-onprem': {
@@ -130,12 +130,20 @@ const INTEGRATIONS = {
                 id: 'ec-op-sdp-op-inventory-sync'
             },
             { 
-                name: 'Auto-assign users',
+                name: 'Auto-assign users for workstations',
                 id: 'ec-op-sdp-op-auto-assign'
             },
             { 
                 name: 'Action to be performed on SDP asset when the asset is removed from SOM in Endpoint Central',
                 id: 'ec-op-sdp-op-asset-removal'
+            },
+            {
+                name: 'Mobile devices sync',
+                id: 'ec-op-sdp-op-mobile-device-sync'
+            },
+            {
+                name: 'Auto-assign owners for mobile devices',
+                id: 'ec-op-sdp-op-auto-assign-mobile'
             },
             { 
                 name: 'User-defined templates can be deployed from SDP tickets',
@@ -175,9 +183,9 @@ const INTEGRATIONS = {
             }
         ],
         documentation: [
-            { title: 'Complete On-Premise Integration Guide', url: 'https://www.manageengine.com/products/desktop-central/ec-sdp-onprem-integration.html' },
-            { title: 'Template Deployment Setup', url: 'https://www.manageengine.com/products/desktop-central/template-deployment.html' },
-            { title: 'SSP Auto-Install Configuration', url: 'https://www.manageengine.com/products/desktop-central/ssp-auto-install.html' },
+            { title: 'Complete On-Premise Integration Guide', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc-sdp-integration-steps.html' },
+            { title: 'Benefits of integration', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc_sdp_integration.html' },
+            { title: 'Features of integration', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc-sdp-integration-features.html' },
             { title: 'Prohibited Software Management', url: 'https://www.manageengine.com/products/desktop-central/prohibited-software.html' }
         ]
     },
