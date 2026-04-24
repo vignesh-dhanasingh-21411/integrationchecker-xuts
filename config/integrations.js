@@ -83,9 +83,9 @@ const INTEGRATIONS = {
             }
         ],
         documentation: [
-            { title: 'EC Cloud to SDP On-Premise Integration', url: 'https://www.manageengine.com/products/desktop-central/sdp-onprem-integration.html' },
-            { title: 'Beta Release Notes', url: 'https://www.manageengine.com/products/desktop-central/beta-release-notes.html' },
-            { title: 'Hybrid Integration Setup', url: 'https://www.manageengine.com/products/desktop-central/hybrid-setup.html' }
+//            { title: 'EC Cloud to SDP On-Premise Integration', url: 'https://www.manageengine.com/products/desktop-central/sdp-onprem-integration.html' },
+//            { title: 'Beta Release Notes', url: 'https://www.manageengine.com/products/desktop-central/beta-release-notes.html' },
+//            { title: 'Hybrid Integration Setup', url: 'https://www.manageengine.com/products/desktop-central/hybrid-setup.html' }
         ]
     },
     'endpoint-central-onprem_servicedesk-plus-cloud': {
