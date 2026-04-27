@@ -161,7 +161,7 @@ const INTEGRATIONS = {
             {
                 name: 'Action to be performed on SDP asset when the mobile device is removed/deprovisioned from EC MDM',
                 id: 'ec-op-sdp-op-mobile-device-removal-action'
-            }
+            },
             { 
                 name: 'User-defined templates can be deployed from SDP tickets',
                 id: 'ec-op-sdp-op-deploy-templates'
@@ -193,6 +193,7 @@ const INTEGRATIONS = {
             {
                 name: 'Worklogs, resolutions and notes can be added to SDP ticket after remote control',
                 id: 'ec-op-sdp-op-worklog'
+            },
             { 
                 name: 'Perform tools action from SDP',
                 id: 'ec-op-sdp-op-tools-action'
