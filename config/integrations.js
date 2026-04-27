@@ -64,6 +64,18 @@ const INTEGRATIONS = {
             { 
                 name: 'SSP requests are created as SDP tickets (Beta)',
                 id: 'ec-sdp-ssp-beta'
+            },
+            {
+                name: 'Mobile devices sync from EC to SDP',
+                id: 'ec-sdp-mobile-sync-cloud'
+            },
+            {
+                name: 'Action to be performed on ServiceDesk Plus when a device is removed in MDM',
+                id: 'ec-sdp-mobile-remove-action-cloud'
+            },
+            {
+                name: 'Perform MDM actions such as Profile association, App distribution, Deprovision device and Locate device from SDP',
+                id: 'ec-sdp-mobile-action-cloud'
             }
         ],
         documentation: [
