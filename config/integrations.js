@@ -205,7 +205,7 @@ const INTEGRATIONS = {
         documentation: [
             { title: 'Complete On-Premise Integration Guide', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc-sdp-integration-steps.html' },
             { title: 'Benefits of integration', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc_sdp_integration.html' },
-            { title: 'Features of integration', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc-sdp-integration-features.html' },
+            { title: 'Features of integration', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc-sdp-integration-features.html' }
 //            { title: 'Prohibited Software Management', url: 'https://www.manageengine.com/products/desktop-central/prohibited-software.html' }
         ]
     },
