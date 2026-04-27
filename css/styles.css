@@ -570,6 +570,34 @@ body {
     transform: translateX(3px);
 }
 
+/* In-Progress Notice */
+.in-progress-notice {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 30px;
+    background: #fff8e1;
+    border: 2px dashed #ffb300;
+    border-radius: 12px;
+}
+
+.in-progress-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.in-progress-notice h3 {
+    font-size: 1.4rem;
+    color: #f57f17;
+    margin-bottom: 10px;
+}
+
+.in-progress-notice p {
+    color: #795548;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
     .product-selectors {
         grid-template-columns: 1fr;
