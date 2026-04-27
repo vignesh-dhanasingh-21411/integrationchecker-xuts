@@ -80,6 +80,7 @@ const INTEGRATIONS = {
         ],
         documentation: [
             { title: 'EC-SDP Cloud Integration Guide', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/integrating-with-servicedesk-plus-cloud.html' },
+            { title: 'Enable MDM device sync', url: 'https://help.sdpondemand.com/mdm-cloud' },
             { title: 'Configuring EC extension for SDP Cloud', url: 'https://help.sdpondemand.com/endpoint-central-extension' },
             { title: 'Troubleshooting errors while enabling integration', url: 'https://www.manageengine.com/products/desktop-central/kb/sdp-on-demand.html' },
             { title: 'Troubleshooting asset sync between ECOD-SDPOD', url: 'https://zask.pali.io/zask/EMSTechAsk/questions/8639642606' }
@@ -157,6 +158,10 @@ const INTEGRATIONS = {
                 name: 'Auto-assign owners for mobile devices',
                 id: 'ec-op-sdp-op-auto-assign-mobile'
             },
+            {
+                name: 'Action to be performed on SDP asset when the mobile device is removed/deprovisioned from EC MDM',
+                id: 'ec-op-sdp-op-mobile-device-removal-action'
+            }
             { 
                 name: 'User-defined templates can be deployed from SDP tickets',
                 id: 'ec-op-sdp-op-deploy-templates'
@@ -185,6 +190,9 @@ const INTEGRATIONS = {
                 name: 'Remote control assets from SDP',
                 id: 'ec-op-sdp-op-remote-control'
             },
+            {
+                name: 'Worklogs, resolutions and notes can be added to SDP ticket after remote control',
+                id: 'ec-op-sdp-op-worklog'
             { 
                 name: 'Perform tools action from SDP',
                 id: 'ec-op-sdp-op-tools-action'
@@ -198,7 +206,7 @@ const INTEGRATIONS = {
             { title: 'Complete On-Premise Integration Guide', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc-sdp-integration-steps.html' },
             { title: 'Benefits of integration', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc_sdp_integration.html' },
             { title: 'Features of integration', url: 'https://www.manageengine.com/products/desktop-central/help/configuring_desktop_central/dc-sdp-integration-features.html' },
-            { title: 'Prohibited Software Management', url: 'https://www.manageengine.com/products/desktop-central/prohibited-software.html' }
+//            { title: 'Prohibited Software Management', url: 'https://www.manageengine.com/products/desktop-central/prohibited-software.html' }
         ]
     },
     
