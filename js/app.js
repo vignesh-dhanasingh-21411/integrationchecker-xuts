@@ -13,6 +13,18 @@
 /* ── State ─────────────────────────────────────────────────── */
 let selectedProducts = { '1': '', '2': '' };
 
+/* ── Product pairs with complete feature details ───────────── */
+const READY_PAIRS = [
+    ['endpoint-central', 'servicedesk-plus']
+];
+
+function isReadyPair(product1, product2) {
+    return READY_PAIRS.some(([a, b]) =>
+        (product1 === a && product2 === b) ||
+        (product1 === b && product2 === a)
+    );
+}
+
 /* ── Boot ──────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     buildDropdowns();
@@ -161,10 +173,9 @@ function displayResults(product1, product2, version1, version2, integration) {
                 </div>
             </div>` : '';
 
-        resultsDiv.innerHTML = `
-            <span class="status-badge status-supported">✓ Integration Supported</span>${betaBadge}
-            <h2>Integration Available</h2>
-            <p class="product-names">${p1Name} (${v1}) ↔ ${p2Name} (${v2})</p>
+        const ready = isReadyPair(product1, product2);
+
+        const featuresHTML = ready ? `
             <div class="features-section">
                 <h3>Supported Integration Features</h3>
                 <p style="color:#666;margin-bottom:15px;font-style:italic;">Click on any feature to learn more</p>
@@ -175,7 +186,18 @@ function displayResults(product1, product2, version1, version2, integration) {
                         </li>`).join('')}
                 </ul>
             </div>
-            ${docHTML}`;
+            ${docHTML}` : `
+            <div class="in-progress-notice">
+                <span class="in-progress-icon">🚧</span>
+                <h3>Feature Details In Progress</h3>
+                <p>Detailed feature information for this integration is currently being prepared. Please check back later.</p>
+            </div>`;
+
+        resultsDiv.innerHTML = `
+            <span class="status-badge status-supported">✓ Integration Supported</span>${betaBadge}
+            <h2>Integration Available</h2>
+            <p class="product-names">${p1Name} (${v1}) ↔ ${p2Name} (${v2})</p>
+            ${featuresHTML}`;
     } else {
         resultsDiv.innerHTML = `
             <span class="status-badge status-not-supported">✗ Integration Not Supported</span>
