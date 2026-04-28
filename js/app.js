@@ -237,12 +237,24 @@ function showFeatureDetail(featureId) {
     const detailDiv = document.getElementById('featureDetail');
     const resultsDiv = document.getElementById('results');
 
+    // Build flowchart image HTML if a flowchartImage path is provided
+    let contentHTML = feature.content;
+    if (feature.flowchartImage) {
+        const flowchartImgHTML = `<div class="flowchart-container">
+                <img src="${feature.flowchartImage}" alt="How this works - flowchart" class="flowchart-image">
+            </div>`;
+        contentHTML = contentHTML.replace(
+            /<div class="flowchart-container">[\s\S]*?<\/div>/,
+            flowchartImgHTML
+        );
+    }
+
     detailDiv.innerHTML = `
         <button class="back-button" onclick="goBackToResults()">Back to Integration</button>
         <span class="feature-badge">Feature Details</span>
         <h2>${feature.title}</h2>
         <p style="font-size:1.15rem;color:#666;margin-bottom:30px;">${feature.description}</p>
-        <div class="feature-content">${feature.content}</div>
+        <div class="feature-content">${contentHTML}</div>
         ${resourceHTML}`;
 
     resultsDiv.classList.remove('show');
