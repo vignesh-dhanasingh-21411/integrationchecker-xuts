@@ -8,14 +8,13 @@
  *
  *  Each entry has:
  *    title       : Display title on the detail page
- *    description : Short summary shown under the title
  *    content     : HTML string with full explanation
  *    links       : [ { title: '...', url: '...' }, ... ]
  *
  *  HOW TO ADD A FEATURE DETAIL PAGE:
  *  1. Copy an existing entry as a template.
  *  2. Set the key to match the feature id from integrations.js.
- *  3. Fill in the four fields above.
+ *  3. Fill in the three fields above.
  *  4. Save and refresh.
  *
  *  Features WITHOUT a matching entry here will show
@@ -27,7 +26,6 @@
 const FEATURE_DETAILS = {
     'acp-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Application Control Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Application Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Application Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -71,7 +69,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ae-deploy-software': {
         title: 'Deploy Software from AssetExplorer Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>AssetExplorer</strong> ticket without switching to the Application Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -112,7 +109,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ae-iframe': {
         title: 'Load Application Control Plus iFrame in AssetExplorer',
-        description: 'Embed the Application Control Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Application Control Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Application Control Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -152,7 +148,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Application Control Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Application Control Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Application Control Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -194,7 +189,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Application Control Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Application Control Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Application Control Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -236,7 +230,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ae-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -278,7 +271,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ae-ssp-beta': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets (Beta)',
-        description: 'Requests raised by end users via the Application Control Plus Self-Service Portal are created as AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Application Control Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Technicians can then process the request through the standard AssetExplorer ticket workflow.</p>
@@ -318,7 +310,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ae-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -357,7 +348,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ae-trayicon-beta': {
         title: 'Trayicon Requests as AssetExplorer Tickets (Beta)',
-        description: 'End-user requests submitted via the Application Control Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Application Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -396,7 +386,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -434,7 +423,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -472,7 +460,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -510,7 +497,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -546,7 +532,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -582,7 +567,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -618,7 +602,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -654,7 +637,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ela-comparators': {
         title: 'ELA Comparators for Application Control Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Application Control Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Application Control Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -690,7 +672,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ela-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Application Control Plus',
-        description: 'Patch compliance data from Application Control Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Application Control Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -728,7 +709,6 @@ const FEATURE_DETAILS = {
     },
     'acp-ela-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Application Control Plus',
-        description: 'Vulnerability and system misconfiguration data from Application Control Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Application Control Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -765,7 +745,6 @@ const FEATURE_DETAILS = {
     },
     'acp-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Application Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -806,7 +785,6 @@ const FEATURE_DETAILS = {
     },
     'acp-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -844,7 +822,6 @@ const FEATURE_DETAILS = {
     },
     'acp-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -886,7 +863,6 @@ const FEATURE_DETAILS = {
     },
     'acp-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -925,7 +901,6 @@ const FEATURE_DETAILS = {
     },
     'acp-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Application Control Plus',
-        description: 'Pulls asset inventory data from Application Control Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Application Control Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -961,7 +936,6 @@ const FEATURE_DETAILS = {
     },
     'acp-jira-iframe': {
         title: 'Load Application Control Plus iFrame in Jira',
-        description: 'Embed the Application Control Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Application Control Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Application Control Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -1001,7 +975,6 @@ const FEATURE_DETAILS = {
     },
     'acp-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -1043,7 +1016,6 @@ const FEATURE_DETAILS = {
     },
     'acp-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -1082,7 +1054,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Application Control Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Application Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Application Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -1126,7 +1097,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -1165,7 +1135,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Application Control Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Application Control Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -1202,7 +1171,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Application Control Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Application Control Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Application Control Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -1244,7 +1212,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-asset-removal': {
         title: 'Asset Removal Action – Application Control Plus → AssetExplorer',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Application Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Application Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -1288,7 +1255,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -1327,7 +1293,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-deploy-packages': {
         title: 'Deploy Software Packages from AssetExplorer Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Application Control Plus) to managed endpoints directly from within <strong>AssetExplorer</strong> tickets. This streamlines software provisioning without requiring access to the Application Control Plus console.</p>
@@ -1364,7 +1329,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-deploy-templates': {
         title: 'Deploy Configuration Templates from AssetExplorer Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>AssetExplorer</strong> to managed endpoints. Templates are created in Application Control Plus and made available through the integration.</p>
@@ -1401,7 +1365,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-iframe': {
         title: 'Load Application Control Plus iFrame in AssetExplorer',
-        description: 'Embed the Application Control Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Application Control Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Application Control Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -1441,7 +1404,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Application Control Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Application Control Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -1478,7 +1440,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Application Control Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Application Control Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Application Control Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -1520,7 +1481,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-prohibited-software': {
         title: 'Prohibited Software Alerts as AssetExplorer Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When the Application Control Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>AssetExplorer</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -1557,7 +1517,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -1599,7 +1558,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets',
-        description: 'Requests raised by end users via the Application Control Plus Self-Service Portal are created as AssetExplorer tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Application Control Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Upon approval of the ticket in AssetExplorer, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -1639,7 +1597,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -1678,7 +1635,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-op-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Application Control Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Application Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -1717,7 +1673,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-software-removal': {
         title: 'Software Removal Sync – Application Control Plus → AssetExplorer',
-        description: 'When commercial software is removed from Application Control Plus, the corresponding software entry is updated in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Application Control Plus's software catalog, this feature automatically updates the corresponding software record in <strong>AssetExplorer</strong>. This keeps the asset management software inventory accurate.</p>
@@ -1751,7 +1706,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ae-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Application Control Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Application Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -1790,7 +1744,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -1828,7 +1781,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -1866,7 +1818,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -1904,7 +1855,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-op-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -1942,7 +1892,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-op-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -1980,7 +1929,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-op-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -2018,7 +1966,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-op-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -2054,7 +2001,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-op-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -2090,7 +2036,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-op-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -2126,7 +2071,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-op-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -2162,7 +2106,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -2198,7 +2141,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -2234,7 +2176,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -2270,7 +2211,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Application Control Plus',
-        description: 'Enables additional optional data categories to be synced from Application Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Application Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -2306,7 +2246,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ela-op-audit-logs': {
         title: 'Audit Log Sync to EventLog Analyzer – Application Control Plus',
-        description: 'Forwards audit log data from Application Control Plus to EventLog Analyzer for log management and compliance.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer data (audit logs)</strong> from <strong>Application Control Plus</strong> to <strong>EventLog Analyzer (ELA)</strong>. ELA processes these logs for compliance reporting, security analysis, and real-time alerting on administrative actions.</p>
@@ -2343,7 +2282,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ela-op-comparators': {
         title: 'ELA Comparators for Application Control Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Application Control Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Application Control Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -2379,7 +2317,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ela-op-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Application Control Plus',
-        description: 'Patch compliance data from Application Control Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Application Control Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -2417,7 +2354,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-ela-op-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Application Control Plus',
-        description: 'Vulnerability and system misconfiguration data from Application Control Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Application Control Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -2454,7 +2390,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Application Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -2495,7 +2430,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -2533,7 +2467,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -2575,7 +2508,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -2614,7 +2546,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Application Control Plus',
-        description: 'Pulls asset inventory data from Application Control Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Application Control Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -2650,7 +2581,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-jira-iframe': {
         title: 'Load Application Control Plus iFrame in Jira',
-        description: 'Embed the Application Control Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Application Control Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Application Control Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -2690,7 +2620,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-jira-op-asset-data': {
         title: 'Asset Data Sync to Jira – Application Control Plus',
-        description: 'Pulls asset inventory data from Application Control Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Application Control Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -2726,7 +2655,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-jira-op-iframe': {
         title: 'Load Application Control Plus iFrame in Jira',
-        description: 'Embed the Application Control Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Application Control Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Application Control Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -2766,7 +2694,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-jira-op-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -2808,7 +2735,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-jira-op-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -2847,7 +2773,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -2889,7 +2814,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -2928,7 +2852,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -2966,7 +2889,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -3004,7 +2926,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -3042,7 +2963,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -3080,7 +3000,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -3118,7 +3037,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -3156,7 +3074,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-qradar-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Application Control Plus',
-        description: 'Forwards action log/audit data from Application Control Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Application Control Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -3195,7 +3112,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-qradar-op-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Application Control Plus',
-        description: 'Forwards action log/audit data from Application Control Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Application Control Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -3234,7 +3150,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Application Control Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Application Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Application Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -3278,7 +3193,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -3317,7 +3231,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Application Control Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Application Control Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -3354,7 +3267,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Application Control Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Application Control Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Application Control Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -3396,7 +3308,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-asset-removal': {
         title: 'Asset Removal Action – Application Control Plus → ServiceDesk Plus',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Application Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Application Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -3440,7 +3351,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -3479,7 +3389,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-deploy-packages': {
         title: 'Deploy Software Packages from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Application Control Plus) to managed endpoints directly from within <strong>ServiceDesk Plus</strong> tickets. This streamlines software provisioning without requiring access to the Application Control Plus console.</p>
@@ -3516,7 +3425,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-deploy-templates': {
         title: 'Deploy Configuration Templates from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>ServiceDesk Plus</strong> to managed endpoints. Templates are created in Application Control Plus and made available through the integration.</p>
@@ -3553,7 +3461,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-iframe': {
         title: 'Load Application Control Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Application Control Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Application Control Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Application Control Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -3593,7 +3500,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Application Control Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Application Control Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -3630,7 +3536,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Application Control Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Application Control Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Application Control Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -3672,7 +3577,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-prohibited-software': {
         title: 'Prohibited Software Alerts as ServiceDesk Plus Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When the Application Control Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>ServiceDesk Plus</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -3709,7 +3613,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -3751,7 +3654,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets',
-        description: 'Requests raised by end users via the Application Control Plus Self-Service Portal are created as ServiceDesk Plus tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Application Control Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Upon approval of the ticket in ServiceDesk Plus, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -3791,7 +3693,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -3830,7 +3731,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-op-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Application Control Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Application Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -3869,7 +3769,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-software-removal': {
         title: 'Software Removal Sync – Application Control Plus → ServiceDesk Plus',
-        description: 'When commercial software is removed from Application Control Plus, the corresponding software entry is updated in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Application Control Plus's software catalog, this feature automatically updates the corresponding software record in <strong>ServiceDesk Plus</strong>. This keeps the asset management software inventory accurate.</p>
@@ -3903,7 +3802,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-sdp-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Application Control Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Application Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -3942,7 +3840,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Application Control Plus',
-        description: 'Posts hardware and software asset data from Application Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Application Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Application Control Plus agent.</p>
@@ -3982,7 +3879,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Application Control Plus',
-        description: 'When a device is removed from Application Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Application Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -4018,7 +3914,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-basic-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Application Control Plus',
-        description: 'Posts hardware and software asset data from Application Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Application Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Application Control Plus agent.</p>
@@ -4058,7 +3953,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-basic-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Application Control Plus',
-        description: 'When a device is removed from Application Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Application Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -4094,7 +3988,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-basic-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -4133,7 +4026,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -4172,7 +4064,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Application Control Plus',
-        description: 'Posts hardware and software asset data from Application Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Application Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Application Control Plus agent.</p>
@@ -4212,7 +4103,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Application Control Plus',
-        description: 'When a device is removed from Application Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Application Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -4248,7 +4138,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Application Control Plus',
-        description: 'Posts hardware and software asset data from Application Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Application Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Application Control Plus agent.</p>
@@ -4288,7 +4177,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Application Control Plus',
-        description: 'When a device is removed from Application Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Application Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -4324,7 +4212,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -4363,7 +4250,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-op-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Application Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -4404,7 +4290,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-op-software-metering': {
         title: 'Software Metering Data to ServiceNow – Application Control Plus',
-        description: 'Posts software metering (usage) data from Application Control Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Application Control Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -4442,7 +4327,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -4481,7 +4365,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Application Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -4522,7 +4405,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Application Control Plus',
-        description: 'Posts software metering (usage) data from Application Control Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Application Control Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -4560,7 +4442,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Application Control Plus',
-        description: 'Forwards action log/audit data from Application Control Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Application Control Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Application Control Plus.</p>
@@ -4600,7 +4481,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Application Control Plus',
-        description: 'Forwards action log/audit data from Application Control Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Application Control Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Application Control Plus.</p>
@@ -4640,7 +4520,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Application Control Plus',
-        description: 'Syncs vulnerability scan data from Application Control Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Application Control Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -4677,7 +4556,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Application Control Plus',
-        description: 'Syncs vulnerability scan data from Application Control Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Application Control Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -4714,7 +4592,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-syslog-cloud-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Application Control Plus',
-        description: 'Forwards action log/audit data from Application Control Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Application Control Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -4753,7 +4630,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-syslog-op-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Application Control Plus',
-        description: 'Forwards action log/audit data from Application Control Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Application Control Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -4792,7 +4668,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Application Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -4833,7 +4708,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -4871,7 +4745,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -4913,7 +4786,6 @@ const FEATURE_DETAILS = {
     },
     'acp-op-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -4952,7 +4824,6 @@ const FEATURE_DETAILS = {
     },
     'acp-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -4990,7 +4861,6 @@ const FEATURE_DETAILS = {
     },
     'acp-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -5028,7 +4898,6 @@ const FEATURE_DETAILS = {
     },
     'acp-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -5066,7 +4935,6 @@ const FEATURE_DETAILS = {
     },
     'acp-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -5104,7 +4972,6 @@ const FEATURE_DETAILS = {
     },
     'acp-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -5142,7 +5009,6 @@ const FEATURE_DETAILS = {
     },
     'acp-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Application Control Plus',
-        description: 'Automatically syncs default data categories from Application Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Application Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -5180,7 +5046,6 @@ const FEATURE_DETAILS = {
     },
     'acp-qradar-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Application Control Plus',
-        description: 'Forwards audit log data from Application Control Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Application Control Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Application Control Plus.</p>
@@ -5212,7 +5077,6 @@ const FEATURE_DETAILS = {
     },
     'acp-qradar-op-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Application Control Plus',
-        description: 'Forwards audit log data from Application Control Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Application Control Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Application Control Plus.</p>
@@ -5244,7 +5108,6 @@ const FEATURE_DETAILS = {
     },
     'acp-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Application Control Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Application Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Application Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -5288,7 +5151,6 @@ const FEATURE_DETAILS = {
     },
     'acp-sdp-deploy-software': {
         title: 'Deploy Software from ServiceDesk Plus Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceDesk Plus</strong> ticket without switching to the Application Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -5329,7 +5191,6 @@ const FEATURE_DETAILS = {
     },
     'acp-sdp-iframe': {
         title: 'Load Application Control Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Application Control Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Application Control Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Application Control Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -5369,7 +5230,6 @@ const FEATURE_DETAILS = {
     },
     'acp-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Application Control Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Application Control Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Application Control Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -5411,7 +5271,6 @@ const FEATURE_DETAILS = {
     },
     'acp-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Application Control Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Application Control Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Application Control Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -5453,7 +5312,6 @@ const FEATURE_DETAILS = {
     },
     'acp-sdp-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -5495,7 +5353,6 @@ const FEATURE_DETAILS = {
     },
     'acp-sdp-ssp-beta': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'Requests raised by end users via the Application Control Plus Self-Service Portal are created as ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Application Control Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Technicians can then process the request through the standard ServiceDesk Plus ticket workflow.</p>
@@ -5535,7 +5392,6 @@ const FEATURE_DETAILS = {
     },
     'acp-sdp-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -5574,7 +5430,6 @@ const FEATURE_DETAILS = {
     },
     'acp-sdp-trayicon-beta': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'End-user requests submitted via the Application Control Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Application Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -5613,7 +5468,6 @@ const FEATURE_DETAILS = {
     },
     'acp-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Application Control Plus',
-        description: 'Posts hardware and software asset data from Application Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Application Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Application Control Plus agent.</p>
@@ -5653,7 +5507,6 @@ const FEATURE_DETAILS = {
     },
     'acp-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Application Control Plus',
-        description: 'When a device is removed from Application Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Application Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -5689,7 +5542,6 @@ const FEATURE_DETAILS = {
     },
     'acp-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -5728,7 +5580,6 @@ const FEATURE_DETAILS = {
     },
     'acp-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Application Control Plus',
-        description: 'Posts hardware and software asset data from Application Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Application Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Application Control Plus agent.</p>
@@ -5768,7 +5619,6 @@ const FEATURE_DETAILS = {
     },
     'acp-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Application Control Plus',
-        description: 'When a device is removed from Application Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Application Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -5804,7 +5654,6 @@ const FEATURE_DETAILS = {
     },
     'acp-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Application Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -5843,7 +5692,6 @@ const FEATURE_DETAILS = {
     },
     'acp-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Application Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -5884,7 +5732,6 @@ const FEATURE_DETAILS = {
     },
     'acp-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Application Control Plus',
-        description: 'Posts software metering (usage) data from Application Control Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Application Control Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -5922,7 +5769,6 @@ const FEATURE_DETAILS = {
     },
     'acp-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Application Control Plus',
-        description: 'Forwards action log/audit data from Application Control Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Application Control Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Application Control Plus.</p>
@@ -5962,7 +5808,6 @@ const FEATURE_DETAILS = {
     },
     'acp-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Application Control Plus',
-        description: 'Forwards action log/audit data from Application Control Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Application Control Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Application Control Plus.</p>
@@ -6002,7 +5847,6 @@ const FEATURE_DETAILS = {
     },
     'acp-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Application Control Plus',
-        description: 'Syncs vulnerability scan data from Application Control Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Application Control Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -6039,7 +5883,6 @@ const FEATURE_DETAILS = {
     },
     'acp-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Application Control Plus',
-        description: 'Syncs vulnerability scan data from Application Control Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Application Control Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -6076,7 +5919,6 @@ const FEATURE_DETAILS = {
     },
     'acp-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Application Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -6117,7 +5959,6 @@ const FEATURE_DETAILS = {
     },
     'acp-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -6155,7 +5996,6 @@ const FEATURE_DETAILS = {
     },
     'acp-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -6197,7 +6037,6 @@ const FEATURE_DETAILS = {
     },
     'acp-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -6236,7 +6075,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Browser Security Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Browser Security Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Browser Security Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -6280,7 +6118,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ae-deploy-software': {
         title: 'Deploy Software from AssetExplorer Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>AssetExplorer</strong> ticket without switching to the Browser Security Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -6321,7 +6158,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ae-iframe': {
         title: 'Load Browser Security Plus iFrame in AssetExplorer',
-        description: 'Embed the Browser Security Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Browser Security Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Browser Security Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -6361,7 +6197,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Browser Security Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Browser Security Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Browser Security Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -6403,7 +6238,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Browser Security Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Browser Security Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Browser Security Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -6445,7 +6279,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ae-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -6487,7 +6320,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ae-ssp-beta': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets (Beta)',
-        description: 'Requests raised by end users via the Browser Security Plus Self-Service Portal are created as AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Browser Security Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Technicians can then process the request through the standard AssetExplorer ticket workflow.</p>
@@ -6527,7 +6359,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ae-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -6566,7 +6397,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ae-trayicon-beta': {
         title: 'Trayicon Requests as AssetExplorer Tickets (Beta)',
-        description: 'End-user requests submitted via the Browser Security Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Browser Security Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -6605,7 +6435,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -6643,7 +6472,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -6681,7 +6509,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -6719,7 +6546,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -6755,7 +6581,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -6791,7 +6616,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -6827,7 +6651,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -6863,7 +6686,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ela-comparators': {
         title: 'ELA Comparators for Browser Security Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Browser Security Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Browser Security Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -6899,7 +6721,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ela-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Browser Security Plus',
-        description: 'Patch compliance data from Browser Security Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Browser Security Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -6937,7 +6758,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-ela-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Browser Security Plus',
-        description: 'Vulnerability and system misconfiguration data from Browser Security Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Browser Security Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -6974,7 +6794,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Browser Security Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -7015,7 +6834,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -7053,7 +6871,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -7095,7 +6912,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -7134,7 +6950,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Browser Security Plus',
-        description: 'Pulls asset inventory data from Browser Security Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Browser Security Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -7170,7 +6985,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-jira-iframe': {
         title: 'Load Browser Security Plus iFrame in Jira',
-        description: 'Embed the Browser Security Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Browser Security Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Browser Security Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -7210,7 +7024,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -7252,7 +7065,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -7291,7 +7103,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Browser Security Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Browser Security Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Browser Security Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -7335,7 +7146,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -7374,7 +7184,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Browser Security Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Browser Security Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -7411,7 +7220,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Browser Security Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Browser Security Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Browser Security Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -7453,7 +7261,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-asset-removal': {
         title: 'Asset Removal Action – Browser Security Plus → AssetExplorer',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Browser Security Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Browser Security Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -7497,7 +7304,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -7536,7 +7342,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-deploy-packages': {
         title: 'Deploy Software Packages from AssetExplorer Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Browser Security Plus) to managed endpoints directly from within <strong>AssetExplorer</strong> tickets. This streamlines software provisioning without requiring access to the Browser Security Plus console.</p>
@@ -7573,7 +7378,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-deploy-templates': {
         title: 'Deploy Configuration Templates from AssetExplorer Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>AssetExplorer</strong> to managed endpoints. Templates are created in Browser Security Plus and made available through the integration.</p>
@@ -7610,7 +7414,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-iframe': {
         title: 'Load Browser Security Plus iFrame in AssetExplorer',
-        description: 'Embed the Browser Security Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Browser Security Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Browser Security Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -7650,7 +7453,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Browser Security Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Browser Security Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -7687,7 +7489,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Browser Security Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Browser Security Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Browser Security Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -7729,7 +7530,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-prohibited-software': {
         title: 'Prohibited Software Alerts as AssetExplorer Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When the Browser Security Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>AssetExplorer</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -7766,7 +7566,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -7808,7 +7607,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets',
-        description: 'Requests raised by end users via the Browser Security Plus Self-Service Portal are created as AssetExplorer tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Browser Security Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Upon approval of the ticket in AssetExplorer, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -7848,7 +7646,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -7887,7 +7684,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-op-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Browser Security Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Browser Security Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -7926,7 +7722,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-software-removal': {
         title: 'Software Removal Sync – Browser Security Plus → AssetExplorer',
-        description: 'When commercial software is removed from Browser Security Plus, the corresponding software entry is updated in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Browser Security Plus's software catalog, this feature automatically updates the corresponding software record in <strong>AssetExplorer</strong>. This keeps the asset management software inventory accurate.</p>
@@ -7960,7 +7755,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ae-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Browser Security Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Browser Security Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -7999,7 +7793,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -8037,7 +7830,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -8075,7 +7867,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -8113,7 +7904,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-op-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -8151,7 +7941,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-op-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -8189,7 +7978,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-op-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -8227,7 +8015,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-op-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -8263,7 +8050,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-op-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -8299,7 +8085,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-op-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -8335,7 +8120,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-op-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -8371,7 +8155,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -8407,7 +8190,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -8443,7 +8225,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -8479,7 +8260,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Browser Security Plus',
-        description: 'Enables additional optional data categories to be synced from Browser Security Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Browser Security Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -8515,7 +8295,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ela-op-audit-logs': {
         title: 'Audit Log Sync to EventLog Analyzer – Browser Security Plus',
-        description: 'Forwards audit log data from Browser Security Plus to EventLog Analyzer for log management and compliance.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer data (audit logs)</strong> from <strong>Browser Security Plus</strong> to <strong>EventLog Analyzer (ELA)</strong>. ELA processes these logs for compliance reporting, security analysis, and real-time alerting on administrative actions.</p>
@@ -8552,7 +8331,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ela-op-comparators': {
         title: 'ELA Comparators for Browser Security Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Browser Security Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Browser Security Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -8588,7 +8366,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ela-op-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Browser Security Plus',
-        description: 'Patch compliance data from Browser Security Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Browser Security Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -8626,7 +8403,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-ela-op-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Browser Security Plus',
-        description: 'Vulnerability and system misconfiguration data from Browser Security Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Browser Security Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -8663,7 +8439,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Browser Security Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -8704,7 +8479,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -8742,7 +8516,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -8784,7 +8557,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -8823,7 +8595,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Browser Security Plus',
-        description: 'Pulls asset inventory data from Browser Security Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Browser Security Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -8859,7 +8630,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-jira-iframe': {
         title: 'Load Browser Security Plus iFrame in Jira',
-        description: 'Embed the Browser Security Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Browser Security Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Browser Security Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -8899,7 +8669,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-jira-op-asset-data': {
         title: 'Asset Data Sync to Jira – Browser Security Plus',
-        description: 'Pulls asset inventory data from Browser Security Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Browser Security Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -8935,7 +8704,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-jira-op-iframe': {
         title: 'Load Browser Security Plus iFrame in Jira',
-        description: 'Embed the Browser Security Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Browser Security Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Browser Security Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -8975,7 +8743,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-jira-op-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -9017,7 +8784,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-jira-op-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -9056,7 +8822,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -9098,7 +8863,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -9137,7 +8901,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -9175,7 +8938,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -9213,7 +8975,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -9251,7 +9012,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -9289,7 +9049,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -9327,7 +9086,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -9365,7 +9123,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-qradar-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Browser Security Plus',
-        description: 'Forwards action log/audit data from Browser Security Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Browser Security Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -9404,7 +9161,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-qradar-op-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Browser Security Plus',
-        description: 'Forwards action log/audit data from Browser Security Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Browser Security Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -9443,7 +9199,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Browser Security Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Browser Security Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Browser Security Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -9487,7 +9242,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -9526,7 +9280,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Browser Security Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Browser Security Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -9563,7 +9316,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Browser Security Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Browser Security Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Browser Security Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -9605,7 +9357,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-asset-removal': {
         title: 'Asset Removal Action – Browser Security Plus → ServiceDesk Plus',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Browser Security Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Browser Security Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -9649,7 +9400,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -9688,7 +9438,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-deploy-packages': {
         title: 'Deploy Software Packages from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Browser Security Plus) to managed endpoints directly from within <strong>ServiceDesk Plus</strong> tickets. This streamlines software provisioning without requiring access to the Browser Security Plus console.</p>
@@ -9725,7 +9474,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-deploy-templates': {
         title: 'Deploy Configuration Templates from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>ServiceDesk Plus</strong> to managed endpoints. Templates are created in Browser Security Plus and made available through the integration.</p>
@@ -9762,7 +9510,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-iframe': {
         title: 'Load Browser Security Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Browser Security Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Browser Security Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Browser Security Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -9802,7 +9549,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Browser Security Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Browser Security Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -9839,7 +9585,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Browser Security Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Browser Security Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Browser Security Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -9881,7 +9626,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-prohibited-software': {
         title: 'Prohibited Software Alerts as ServiceDesk Plus Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When the Browser Security Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>ServiceDesk Plus</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -9918,7 +9662,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -9960,7 +9703,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets',
-        description: 'Requests raised by end users via the Browser Security Plus Self-Service Portal are created as ServiceDesk Plus tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Browser Security Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Upon approval of the ticket in ServiceDesk Plus, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -10000,7 +9742,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -10039,7 +9780,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-op-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Browser Security Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Browser Security Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -10078,7 +9818,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-software-removal': {
         title: 'Software Removal Sync – Browser Security Plus → ServiceDesk Plus',
-        description: 'When commercial software is removed from Browser Security Plus, the corresponding software entry is updated in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Browser Security Plus's software catalog, this feature automatically updates the corresponding software record in <strong>ServiceDesk Plus</strong>. This keeps the asset management software inventory accurate.</p>
@@ -10112,7 +9851,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-sdp-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Browser Security Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Browser Security Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -10151,7 +9889,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Browser Security Plus',
-        description: 'Posts hardware and software asset data from Browser Security Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Browser Security Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Browser Security Plus agent.</p>
@@ -10191,7 +9928,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Browser Security Plus',
-        description: 'When a device is removed from Browser Security Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Browser Security Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -10227,7 +9963,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-basic-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Browser Security Plus',
-        description: 'Posts hardware and software asset data from Browser Security Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Browser Security Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Browser Security Plus agent.</p>
@@ -10267,7 +10002,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-basic-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Browser Security Plus',
-        description: 'When a device is removed from Browser Security Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Browser Security Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -10303,7 +10037,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-basic-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -10342,7 +10075,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -10381,7 +10113,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Browser Security Plus',
-        description: 'Posts hardware and software asset data from Browser Security Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Browser Security Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Browser Security Plus agent.</p>
@@ -10421,7 +10152,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Browser Security Plus',
-        description: 'When a device is removed from Browser Security Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Browser Security Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -10457,7 +10187,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Browser Security Plus',
-        description: 'Posts hardware and software asset data from Browser Security Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Browser Security Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Browser Security Plus agent.</p>
@@ -10497,7 +10226,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Browser Security Plus',
-        description: 'When a device is removed from Browser Security Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Browser Security Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -10533,7 +10261,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -10572,7 +10299,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-op-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Browser Security Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -10613,7 +10339,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-op-software-metering': {
         title: 'Software Metering Data to ServiceNow – Browser Security Plus',
-        description: 'Posts software metering (usage) data from Browser Security Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Browser Security Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -10651,7 +10376,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -10690,7 +10414,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Browser Security Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -10731,7 +10454,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Browser Security Plus',
-        description: 'Posts software metering (usage) data from Browser Security Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Browser Security Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -10769,7 +10491,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Browser Security Plus',
-        description: 'Forwards action log/audit data from Browser Security Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Browser Security Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Browser Security Plus.</p>
@@ -10809,7 +10530,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Browser Security Plus',
-        description: 'Forwards action log/audit data from Browser Security Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Browser Security Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Browser Security Plus.</p>
@@ -10849,7 +10569,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Browser Security Plus',
-        description: 'Syncs vulnerability scan data from Browser Security Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Browser Security Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -10886,7 +10605,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Browser Security Plus',
-        description: 'Syncs vulnerability scan data from Browser Security Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Browser Security Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -10923,7 +10641,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-syslog-cloud-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Browser Security Plus',
-        description: 'Forwards action log/audit data from Browser Security Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Browser Security Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -10962,7 +10679,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-syslog-op-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Browser Security Plus',
-        description: 'Forwards action log/audit data from Browser Security Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Browser Security Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -11001,7 +10717,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Browser Security Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -11042,7 +10757,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -11080,7 +10794,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -11122,7 +10835,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-op-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -11161,7 +10873,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -11199,7 +10910,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -11237,7 +10947,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -11275,7 +10984,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -11313,7 +11021,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -11351,7 +11058,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Browser Security Plus',
-        description: 'Automatically syncs default data categories from Browser Security Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Browser Security Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -11389,7 +11095,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-qradar-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Browser Security Plus',
-        description: 'Forwards audit log data from Browser Security Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Browser Security Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Browser Security Plus.</p>
@@ -11421,7 +11126,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-qradar-op-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Browser Security Plus',
-        description: 'Forwards audit log data from Browser Security Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Browser Security Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Browser Security Plus.</p>
@@ -11453,7 +11157,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Browser Security Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Browser Security Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Browser Security Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -11497,7 +11200,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-sdp-deploy-software': {
         title: 'Deploy Software from ServiceDesk Plus Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceDesk Plus</strong> ticket without switching to the Browser Security Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -11538,7 +11240,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-sdp-iframe': {
         title: 'Load Browser Security Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Browser Security Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Browser Security Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Browser Security Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -11578,7 +11279,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Browser Security Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Browser Security Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Browser Security Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -11620,7 +11320,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Browser Security Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Browser Security Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Browser Security Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -11662,7 +11361,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-sdp-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -11704,7 +11402,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-sdp-ssp-beta': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'Requests raised by end users via the Browser Security Plus Self-Service Portal are created as ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Browser Security Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Technicians can then process the request through the standard ServiceDesk Plus ticket workflow.</p>
@@ -11744,7 +11441,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-sdp-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -11783,7 +11479,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-sdp-trayicon-beta': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'End-user requests submitted via the Browser Security Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Browser Security Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -11822,7 +11517,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Browser Security Plus',
-        description: 'Posts hardware and software asset data from Browser Security Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Browser Security Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Browser Security Plus agent.</p>
@@ -11862,7 +11556,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Browser Security Plus',
-        description: 'When a device is removed from Browser Security Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Browser Security Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -11898,7 +11591,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -11937,7 +11629,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Browser Security Plus',
-        description: 'Posts hardware and software asset data from Browser Security Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Browser Security Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Browser Security Plus agent.</p>
@@ -11977,7 +11668,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Browser Security Plus',
-        description: 'When a device is removed from Browser Security Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Browser Security Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -12013,7 +11703,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Browser Security Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -12052,7 +11741,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Browser Security Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -12093,7 +11781,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Browser Security Plus',
-        description: 'Posts software metering (usage) data from Browser Security Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Browser Security Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -12131,7 +11818,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Browser Security Plus',
-        description: 'Forwards action log/audit data from Browser Security Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Browser Security Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Browser Security Plus.</p>
@@ -12171,7 +11857,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Browser Security Plus',
-        description: 'Forwards action log/audit data from Browser Security Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Browser Security Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Browser Security Plus.</p>
@@ -12211,7 +11896,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Browser Security Plus',
-        description: 'Syncs vulnerability scan data from Browser Security Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Browser Security Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -12248,7 +11932,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Browser Security Plus',
-        description: 'Syncs vulnerability scan data from Browser Security Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Browser Security Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -12285,7 +11968,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Browser Security Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -12326,7 +12008,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -12364,7 +12045,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -12406,7 +12086,6 @@ const FEATURE_DETAILS = {
     },
     'bsp-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -12445,7 +12124,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Device Control Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Device Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Device Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -12489,7 +12167,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ae-deploy-software': {
         title: 'Deploy Software from AssetExplorer Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>AssetExplorer</strong> ticket without switching to the Device Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -12530,7 +12207,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ae-iframe': {
         title: 'Load Device Control Plus iFrame in AssetExplorer',
-        description: 'Embed the Device Control Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Device Control Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Device Control Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -12570,7 +12246,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Device Control Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Device Control Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Device Control Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -12612,7 +12287,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Device Control Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Device Control Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Device Control Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -12654,7 +12328,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ae-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -12696,7 +12369,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ae-ssp-beta': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets (Beta)',
-        description: 'Requests raised by end users via the Device Control Plus Self-Service Portal are created as AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Device Control Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Technicians can then process the request through the standard AssetExplorer ticket workflow.</p>
@@ -12736,7 +12408,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ae-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -12775,7 +12446,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ae-trayicon-beta': {
         title: 'Trayicon Requests as AssetExplorer Tickets (Beta)',
-        description: 'End-user requests submitted via the Device Control Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Device Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -12814,7 +12484,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -12852,7 +12521,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -12890,7 +12558,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -12928,7 +12595,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -12964,7 +12630,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -13000,7 +12665,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -13036,7 +12700,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -13072,7 +12735,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ela-comparators': {
         title: 'ELA Comparators for Device Control Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Device Control Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Device Control Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -13108,7 +12770,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ela-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Device Control Plus',
-        description: 'Patch compliance data from Device Control Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Device Control Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -13146,7 +12807,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-ela-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Device Control Plus',
-        description: 'Vulnerability and system misconfiguration data from Device Control Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Device Control Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -13183,7 +12843,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Device Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -13224,7 +12883,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -13262,7 +12920,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -13304,7 +12961,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -13343,7 +12999,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Device Control Plus',
-        description: 'Pulls asset inventory data from Device Control Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Device Control Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -13379,7 +13034,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-jira-iframe': {
         title: 'Load Device Control Plus iFrame in Jira',
-        description: 'Embed the Device Control Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Device Control Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Device Control Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -13419,7 +13073,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -13461,7 +13114,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -13500,7 +13152,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Device Control Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Device Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Device Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -13544,7 +13195,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -13583,7 +13233,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Device Control Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Device Control Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -13620,7 +13269,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Device Control Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Device Control Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Device Control Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -13662,7 +13310,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-asset-removal': {
         title: 'Asset Removal Action – Device Control Plus → AssetExplorer',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Device Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Device Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -13706,7 +13353,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -13745,7 +13391,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-deploy-packages': {
         title: 'Deploy Software Packages from AssetExplorer Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Device Control Plus) to managed endpoints directly from within <strong>AssetExplorer</strong> tickets. This streamlines software provisioning without requiring access to the Device Control Plus console.</p>
@@ -13782,7 +13427,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-deploy-templates': {
         title: 'Deploy Configuration Templates from AssetExplorer Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>AssetExplorer</strong> to managed endpoints. Templates are created in Device Control Plus and made available through the integration.</p>
@@ -13819,7 +13463,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-iframe': {
         title: 'Load Device Control Plus iFrame in AssetExplorer',
-        description: 'Embed the Device Control Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Device Control Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Device Control Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -13859,7 +13502,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Device Control Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Device Control Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -13896,7 +13538,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Device Control Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Device Control Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Device Control Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -13938,7 +13579,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-prohibited-software': {
         title: 'Prohibited Software Alerts as AssetExplorer Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When the Device Control Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>AssetExplorer</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -13975,7 +13615,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -14017,7 +13656,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets',
-        description: 'Requests raised by end users via the Device Control Plus Self-Service Portal are created as AssetExplorer tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Device Control Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Upon approval of the ticket in AssetExplorer, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -14057,7 +13695,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -14096,7 +13733,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-op-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Device Control Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Device Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -14135,7 +13771,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-software-removal': {
         title: 'Software Removal Sync – Device Control Plus → AssetExplorer',
-        description: 'When commercial software is removed from Device Control Plus, the corresponding software entry is updated in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Device Control Plus's software catalog, this feature automatically updates the corresponding software record in <strong>AssetExplorer</strong>. This keeps the asset management software inventory accurate.</p>
@@ -14169,7 +13804,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ae-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Device Control Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Device Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -14208,7 +13842,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -14246,7 +13879,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -14284,7 +13916,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -14322,7 +13953,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-op-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -14360,7 +13990,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-op-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -14398,7 +14027,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-op-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -14436,7 +14064,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-op-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -14472,7 +14099,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-op-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -14508,7 +14134,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-op-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -14544,7 +14169,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-op-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -14580,7 +14204,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -14616,7 +14239,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -14652,7 +14274,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -14688,7 +14309,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Device Control Plus',
-        description: 'Enables additional optional data categories to be synced from Device Control Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Device Control Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -14724,7 +14344,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ela-op-audit-logs': {
         title: 'Audit Log Sync to EventLog Analyzer – Device Control Plus',
-        description: 'Forwards audit log data from Device Control Plus to EventLog Analyzer for log management and compliance.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer data (audit logs)</strong> from <strong>Device Control Plus</strong> to <strong>EventLog Analyzer (ELA)</strong>. ELA processes these logs for compliance reporting, security analysis, and real-time alerting on administrative actions.</p>
@@ -14761,7 +14380,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ela-op-comparators': {
         title: 'ELA Comparators for Device Control Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Device Control Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Device Control Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -14797,7 +14415,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ela-op-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Device Control Plus',
-        description: 'Patch compliance data from Device Control Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Device Control Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -14835,7 +14452,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-ela-op-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Device Control Plus',
-        description: 'Vulnerability and system misconfiguration data from Device Control Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Device Control Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -14872,7 +14488,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Device Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -14913,7 +14528,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -14951,7 +14565,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -14993,7 +14606,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -15032,7 +14644,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Device Control Plus',
-        description: 'Pulls asset inventory data from Device Control Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Device Control Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -15068,7 +14679,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-jira-iframe': {
         title: 'Load Device Control Plus iFrame in Jira',
-        description: 'Embed the Device Control Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Device Control Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Device Control Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -15108,7 +14718,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-jira-op-asset-data': {
         title: 'Asset Data Sync to Jira – Device Control Plus',
-        description: 'Pulls asset inventory data from Device Control Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Device Control Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -15144,7 +14753,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-jira-op-iframe': {
         title: 'Load Device Control Plus iFrame in Jira',
-        description: 'Embed the Device Control Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Device Control Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Device Control Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -15184,7 +14792,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-jira-op-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -15226,7 +14833,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-jira-op-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -15265,7 +14871,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -15307,7 +14912,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -15346,7 +14950,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -15384,7 +14987,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -15422,7 +15024,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -15460,7 +15061,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -15498,7 +15098,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -15536,7 +15135,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -15574,7 +15172,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-qradar-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Device Control Plus',
-        description: 'Forwards action log/audit data from Device Control Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Device Control Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -15613,7 +15210,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-qradar-op-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Device Control Plus',
-        description: 'Forwards action log/audit data from Device Control Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Device Control Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -15652,7 +15248,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Device Control Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Device Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Device Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -15696,7 +15291,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -15735,7 +15329,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Device Control Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Device Control Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -15772,7 +15365,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Device Control Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Device Control Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Device Control Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -15814,7 +15406,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-asset-removal': {
         title: 'Asset Removal Action – Device Control Plus → ServiceDesk Plus',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Device Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Device Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -15858,7 +15449,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -15897,7 +15487,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-deploy-packages': {
         title: 'Deploy Software Packages from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Device Control Plus) to managed endpoints directly from within <strong>ServiceDesk Plus</strong> tickets. This streamlines software provisioning without requiring access to the Device Control Plus console.</p>
@@ -15934,7 +15523,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-deploy-templates': {
         title: 'Deploy Configuration Templates from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>ServiceDesk Plus</strong> to managed endpoints. Templates are created in Device Control Plus and made available through the integration.</p>
@@ -15971,7 +15559,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-iframe': {
         title: 'Load Device Control Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Device Control Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Device Control Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Device Control Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -16011,7 +15598,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Device Control Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Device Control Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -16048,7 +15634,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Device Control Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Device Control Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Device Control Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -16090,7 +15675,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-prohibited-software': {
         title: 'Prohibited Software Alerts as ServiceDesk Plus Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When the Device Control Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>ServiceDesk Plus</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -16127,7 +15711,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -16169,7 +15752,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets',
-        description: 'Requests raised by end users via the Device Control Plus Self-Service Portal are created as ServiceDesk Plus tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Device Control Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Upon approval of the ticket in ServiceDesk Plus, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -16209,7 +15791,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -16248,7 +15829,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-op-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Device Control Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Device Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -16287,7 +15867,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-software-removal': {
         title: 'Software Removal Sync – Device Control Plus → ServiceDesk Plus',
-        description: 'When commercial software is removed from Device Control Plus, the corresponding software entry is updated in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Device Control Plus's software catalog, this feature automatically updates the corresponding software record in <strong>ServiceDesk Plus</strong>. This keeps the asset management software inventory accurate.</p>
@@ -16321,7 +15900,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-sdp-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Device Control Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Device Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -16360,7 +15938,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Device Control Plus',
-        description: 'Posts hardware and software asset data from Device Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Device Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Device Control Plus agent.</p>
@@ -16400,7 +15977,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Device Control Plus',
-        description: 'When a device is removed from Device Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Device Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -16436,7 +16012,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-basic-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Device Control Plus',
-        description: 'Posts hardware and software asset data from Device Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Device Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Device Control Plus agent.</p>
@@ -16476,7 +16051,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-basic-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Device Control Plus',
-        description: 'When a device is removed from Device Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Device Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -16512,7 +16086,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-basic-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -16551,7 +16124,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -16590,7 +16162,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Device Control Plus',
-        description: 'Posts hardware and software asset data from Device Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Device Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Device Control Plus agent.</p>
@@ -16630,7 +16201,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Device Control Plus',
-        description: 'When a device is removed from Device Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Device Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -16666,7 +16236,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Device Control Plus',
-        description: 'Posts hardware and software asset data from Device Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Device Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Device Control Plus agent.</p>
@@ -16706,7 +16275,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Device Control Plus',
-        description: 'When a device is removed from Device Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Device Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -16742,7 +16310,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -16781,7 +16348,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-op-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Device Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -16822,7 +16388,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-op-software-metering': {
         title: 'Software Metering Data to ServiceNow – Device Control Plus',
-        description: 'Posts software metering (usage) data from Device Control Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Device Control Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -16860,7 +16425,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -16899,7 +16463,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Device Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -16940,7 +16503,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Device Control Plus',
-        description: 'Posts software metering (usage) data from Device Control Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Device Control Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -16978,7 +16540,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Device Control Plus',
-        description: 'Forwards action log/audit data from Device Control Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Device Control Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Device Control Plus.</p>
@@ -17018,7 +16579,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Device Control Plus',
-        description: 'Forwards action log/audit data from Device Control Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Device Control Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Device Control Plus.</p>
@@ -17058,7 +16618,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Device Control Plus',
-        description: 'Syncs vulnerability scan data from Device Control Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Device Control Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -17095,7 +16654,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Device Control Plus',
-        description: 'Syncs vulnerability scan data from Device Control Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Device Control Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -17132,7 +16690,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-syslog-cloud-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Device Control Plus',
-        description: 'Forwards action log/audit data from Device Control Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Device Control Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -17171,7 +16728,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-syslog-op-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Device Control Plus',
-        description: 'Forwards action log/audit data from Device Control Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Device Control Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -17210,7 +16766,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Device Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -17251,7 +16806,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -17289,7 +16843,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -17331,7 +16884,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-op-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -17370,7 +16922,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -17408,7 +16959,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -17446,7 +16996,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -17484,7 +17033,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -17522,7 +17070,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -17560,7 +17107,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Device Control Plus',
-        description: 'Automatically syncs default data categories from Device Control Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Device Control Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -17598,7 +17144,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-qradar-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Device Control Plus',
-        description: 'Forwards audit log data from Device Control Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Device Control Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Device Control Plus.</p>
@@ -17630,7 +17175,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-qradar-op-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Device Control Plus',
-        description: 'Forwards audit log data from Device Control Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Device Control Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Device Control Plus.</p>
@@ -17662,7 +17206,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Device Control Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Device Control Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Device Control Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -17706,7 +17249,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-sdp-deploy-software': {
         title: 'Deploy Software from ServiceDesk Plus Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceDesk Plus</strong> ticket without switching to the Device Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -17747,7 +17289,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-sdp-iframe': {
         title: 'Load Device Control Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Device Control Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Device Control Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Device Control Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -17787,7 +17328,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Device Control Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Device Control Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Device Control Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -17829,7 +17369,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Device Control Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Device Control Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Device Control Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -17871,7 +17410,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-sdp-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -17913,7 +17451,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-sdp-ssp-beta': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'Requests raised by end users via the Device Control Plus Self-Service Portal are created as ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Device Control Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Technicians can then process the request through the standard ServiceDesk Plus ticket workflow.</p>
@@ -17953,7 +17490,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-sdp-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -17992,7 +17528,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-sdp-trayicon-beta': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'End-user requests submitted via the Device Control Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Device Control Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -18031,7 +17566,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Device Control Plus',
-        description: 'Posts hardware and software asset data from Device Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Device Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Device Control Plus agent.</p>
@@ -18071,7 +17605,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Device Control Plus',
-        description: 'When a device is removed from Device Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Device Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -18107,7 +17640,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -18146,7 +17678,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Device Control Plus',
-        description: 'Posts hardware and software asset data from Device Control Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Device Control Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Device Control Plus agent.</p>
@@ -18186,7 +17717,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Device Control Plus',
-        description: 'When a device is removed from Device Control Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Device Control Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -18222,7 +17752,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Device Control Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -18261,7 +17790,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Device Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -18302,7 +17830,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Device Control Plus',
-        description: 'Posts software metering (usage) data from Device Control Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Device Control Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -18340,7 +17867,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Device Control Plus',
-        description: 'Forwards action log/audit data from Device Control Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Device Control Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Device Control Plus.</p>
@@ -18380,7 +17906,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Device Control Plus',
-        description: 'Forwards action log/audit data from Device Control Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Device Control Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Device Control Plus.</p>
@@ -18420,7 +17945,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Device Control Plus',
-        description: 'Syncs vulnerability scan data from Device Control Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Device Control Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -18457,7 +17981,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Device Control Plus',
-        description: 'Syncs vulnerability scan data from Device Control Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Device Control Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -18494,7 +18017,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Device Control Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -18535,7 +18057,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -18573,7 +18094,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -18615,7 +18135,6 @@ const FEATURE_DETAILS = {
     },
     'dcp-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -18654,7 +18173,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Endpoint Central → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Endpoint Central Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Endpoint Central</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -18698,7 +18216,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ae-deploy-software': {
         title: 'Deploy Software from AssetExplorer Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>AssetExplorer</strong> ticket without switching to the Endpoint Central console. This speeds up ticket resolution for software-related requests.</p>
@@ -18739,7 +18256,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ae-iframe': {
         title: 'Load Endpoint Central iFrame in AssetExplorer',
-        description: 'Embed the Endpoint Central console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Endpoint Central</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Endpoint Central features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -18779,7 +18295,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Endpoint Central → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Endpoint Central to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Endpoint Central</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -18821,7 +18336,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Endpoint Central → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Endpoint Central to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Endpoint Central</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -18863,7 +18377,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ae-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -18905,7 +18418,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ae-ssp-beta': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets (Beta)',
-        description: 'Requests raised by end users via the Endpoint Central Self-Service Portal are created as AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Endpoint Central Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Technicians can then process the request through the standard AssetExplorer ticket workflow.</p>
@@ -18945,7 +18457,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ae-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -18984,7 +18495,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ae-trayicon-beta': {
         title: 'Trayicon Requests as AssetExplorer Tickets (Beta)',
-        description: 'End-user requests submitted via the Endpoint Central system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Endpoint Central agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -19023,7 +18533,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -19061,7 +18570,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -19099,7 +18607,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -19137,7 +18644,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -19173,7 +18679,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -19209,7 +18714,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -19245,7 +18749,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -19281,7 +18784,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ela-comparators': {
         title: 'ELA Comparators for Endpoint Central',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Endpoint Central data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Endpoint Central) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -19317,7 +18819,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ela-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Endpoint Central',
-        description: 'Patch compliance data from Endpoint Central is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Endpoint Central</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -19355,7 +18856,6 @@ const FEATURE_DETAILS = {
     },
     'ec-ela-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Endpoint Central',
-        description: 'Vulnerability and system misconfiguration data from Endpoint Central is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Endpoint Central</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -19392,7 +18892,6 @@ const FEATURE_DETAILS = {
     },
     'ec-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Endpoint Central console. This speeds up ticket resolution for software-related requests.</p>
@@ -19433,7 +18932,6 @@ const FEATURE_DETAILS = {
     },
     'ec-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -19471,7 +18969,6 @@ const FEATURE_DETAILS = {
     },
     'ec-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -19513,7 +19010,6 @@ const FEATURE_DETAILS = {
     },
     'ec-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -19552,7 +19048,6 @@ const FEATURE_DETAILS = {
     },
     'ec-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Endpoint Central',
-        description: 'Pulls asset inventory data from Endpoint Central into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Endpoint Central</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -19588,7 +19083,6 @@ const FEATURE_DETAILS = {
     },
     'ec-jira-iframe': {
         title: 'Load Endpoint Central iFrame in Jira',
-        description: 'Embed the Endpoint Central console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Endpoint Central</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Endpoint Central features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -19628,7 +19122,6 @@ const FEATURE_DETAILS = {
     },
     'ec-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -19670,7 +19163,6 @@ const FEATURE_DETAILS = {
     },
     'ec-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -19709,7 +19201,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Endpoint Central → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Endpoint Central Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Endpoint Central</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -19753,7 +19244,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -19792,7 +19282,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Endpoint Central are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Endpoint Central detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -19829,7 +19318,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Endpoint Central → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Endpoint Central to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Endpoint Central</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -19871,7 +19359,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-asset-removal': {
         title: 'Asset Removal Action – Endpoint Central → AssetExplorer',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Endpoint Central Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Endpoint Central</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -19915,7 +19402,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -19954,7 +19440,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-deploy-packages': {
         title: 'Deploy Software Packages from AssetExplorer Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Endpoint Central) to managed endpoints directly from within <strong>AssetExplorer</strong> tickets. This streamlines software provisioning without requiring access to the Endpoint Central console.</p>
@@ -19991,7 +19476,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-deploy-templates': {
         title: 'Deploy Configuration Templates from AssetExplorer Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>AssetExplorer</strong> to managed endpoints. Templates are created in Endpoint Central and made available through the integration.</p>
@@ -20028,7 +19512,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-iframe': {
         title: 'Load Endpoint Central iFrame in AssetExplorer',
-        description: 'Embed the Endpoint Central console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Endpoint Central</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Endpoint Central features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -20068,7 +19551,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Endpoint Central are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Endpoint Central detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -20105,7 +19587,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Endpoint Central → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Endpoint Central to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Endpoint Central</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -20147,7 +19628,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-prohibited-software': {
         title: 'Prohibited Software Alerts as AssetExplorer Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When the Endpoint Central agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>AssetExplorer</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -20184,7 +19664,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -20226,7 +19705,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets',
-        description: 'Requests raised by end users via the Endpoint Central Self-Service Portal are created as AssetExplorer tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Endpoint Central Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Upon approval of the ticket in AssetExplorer, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -20266,7 +19744,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -20305,7 +19782,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-op-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Endpoint Central system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Endpoint Central agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -20344,7 +19820,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-software-removal': {
         title: 'Software Removal Sync – Endpoint Central → AssetExplorer',
-        description: 'When commercial software is removed from Endpoint Central, the corresponding software entry is updated in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Endpoint Central's software catalog, this feature automatically updates the corresponding software record in <strong>AssetExplorer</strong>. This keeps the asset management software inventory accurate.</p>
@@ -20378,7 +19853,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ae-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Endpoint Central system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Endpoint Central agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -20417,7 +19891,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -20455,7 +19928,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -20493,7 +19965,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -20531,7 +20002,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-op-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -20569,7 +20039,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-op-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -20607,7 +20076,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-op-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -20645,7 +20113,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-op-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -20681,7 +20148,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-op-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -20717,7 +20183,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-op-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -20753,7 +20218,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-op-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -20789,7 +20253,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -20825,7 +20288,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -20861,7 +20323,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -20897,7 +20358,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Endpoint Central',
-        description: 'Enables additional optional data categories to be synced from Endpoint Central to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Endpoint Central</strong> to <strong>Analytics Plus</strong>:</p>
@@ -20933,7 +20393,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ela-op-audit-logs': {
         title: 'Audit Log Sync to EventLog Analyzer – Endpoint Central',
-        description: 'Forwards audit log data from Endpoint Central to EventLog Analyzer for log management and compliance.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer data (audit logs)</strong> from <strong>Endpoint Central</strong> to <strong>EventLog Analyzer (ELA)</strong>. ELA processes these logs for compliance reporting, security analysis, and real-time alerting on administrative actions.</p>
@@ -20970,7 +20429,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ela-op-comparators': {
         title: 'ELA Comparators for Endpoint Central',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Endpoint Central data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Endpoint Central) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -21006,7 +20464,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ela-op-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Endpoint Central',
-        description: 'Patch compliance data from Endpoint Central is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Endpoint Central</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -21044,7 +20501,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-ela-op-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Endpoint Central',
-        description: 'Vulnerability and system misconfiguration data from Endpoint Central is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Endpoint Central</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -21081,7 +20537,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Endpoint Central console. This speeds up ticket resolution for software-related requests.</p>
@@ -21122,7 +20577,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -21160,7 +20614,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -21202,7 +20655,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -21241,7 +20693,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Endpoint Central',
-        description: 'Pulls asset inventory data from Endpoint Central into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Endpoint Central</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -21277,7 +20728,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-jira-iframe': {
         title: 'Load Endpoint Central iFrame in Jira',
-        description: 'Embed the Endpoint Central console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Endpoint Central</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Endpoint Central features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -21317,7 +20767,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-jira-op-asset-data': {
         title: 'Asset Data Sync to Jira – Endpoint Central',
-        description: 'Pulls asset inventory data from Endpoint Central into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Endpoint Central</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -21353,7 +20802,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-jira-op-iframe': {
         title: 'Load Endpoint Central iFrame in Jira',
-        description: 'Embed the Endpoint Central console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Endpoint Central</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Endpoint Central features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -21393,7 +20841,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-jira-op-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -21435,7 +20882,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-jira-op-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -21474,7 +20920,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -21516,7 +20961,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -21555,7 +20999,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -21593,7 +21036,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -21631,7 +21073,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -21669,7 +21110,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -21707,7 +21147,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -21745,7 +21184,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -21783,7 +21221,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-qradar-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Endpoint Central',
-        description: 'Forwards action log/audit data from Endpoint Central to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Endpoint Central</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -21822,7 +21259,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-qradar-op-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Endpoint Central',
-        description: 'Forwards action log/audit data from Endpoint Central to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Endpoint Central</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -21861,7 +21297,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Endpoint Central → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Endpoint Central Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Endpoint Central</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -21905,7 +21340,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -21944,7 +21378,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Endpoint Central are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Endpoint Central detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -21981,7 +21414,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Endpoint Central → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Endpoint Central to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Endpoint Central</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -22023,7 +21455,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-asset-removal': {
         title: 'Asset Removal Action – Endpoint Central → ServiceDesk Plus',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Endpoint Central Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Endpoint Central</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -22067,7 +21498,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -22106,7 +21536,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-deploy-packages': {
         title: 'Deploy Software Packages from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Endpoint Central) to managed endpoints directly from within <strong>ServiceDesk Plus</strong> tickets. This streamlines software provisioning without requiring access to the Endpoint Central console.</p>
@@ -22143,7 +21572,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-deploy-templates': {
         title: 'Deploy Configuration Templates from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>ServiceDesk Plus</strong> to managed endpoints. Templates are created in Endpoint Central and made available through the integration.</p>
@@ -22180,7 +21608,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-iframe': {
         title: 'Load Endpoint Central iFrame in ServiceDesk Plus',
-        description: 'Embed the Endpoint Central console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Endpoint Central</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Endpoint Central features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -22220,7 +21647,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Endpoint Central are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Endpoint Central detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -22257,7 +21683,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Endpoint Central → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Endpoint Central to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Endpoint Central</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -22299,7 +21724,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-prohibited-software': {
         title: 'Prohibited Software Alerts as ServiceDesk Plus Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When the Endpoint Central agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>ServiceDesk Plus</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -22336,7 +21760,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -22378,7 +21801,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets',
-        description: 'Requests raised by end users via the Endpoint Central Self-Service Portal are created as ServiceDesk Plus tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Endpoint Central Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Upon approval of the ticket in ServiceDesk Plus, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -22418,7 +21840,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -22457,7 +21878,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-op-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Endpoint Central system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Endpoint Central agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -22496,7 +21916,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-software-removal': {
         title: 'Software Removal Sync – Endpoint Central → ServiceDesk Plus',
-        description: 'When commercial software is removed from Endpoint Central, the corresponding software entry is updated in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Endpoint Central's software catalog, this feature automatically updates the corresponding software record in <strong>ServiceDesk Plus</strong>. This keeps the asset management software inventory accurate.</p>
@@ -22530,7 +21949,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-sdp-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Endpoint Central system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Endpoint Central agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -22569,7 +21987,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Endpoint Central',
-        description: 'Posts hardware and software asset data from Endpoint Central to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Endpoint Central</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Endpoint Central agent.</p>
@@ -22609,7 +22026,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Endpoint Central',
-        description: 'When a device is removed from Endpoint Central SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Endpoint Central</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -22645,7 +22061,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-basic-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Endpoint Central',
-        description: 'Posts hardware and software asset data from Endpoint Central to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Endpoint Central</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Endpoint Central agent.</p>
@@ -22685,7 +22100,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-basic-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Endpoint Central',
-        description: 'When a device is removed from Endpoint Central SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Endpoint Central</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -22721,7 +22135,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-basic-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -22760,7 +22173,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -22799,7 +22211,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Endpoint Central',
-        description: 'Posts hardware and software asset data from Endpoint Central to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Endpoint Central</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Endpoint Central agent.</p>
@@ -22839,7 +22250,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Endpoint Central',
-        description: 'When a device is removed from Endpoint Central SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Endpoint Central</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -22875,7 +22285,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Endpoint Central',
-        description: 'Posts hardware and software asset data from Endpoint Central to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Endpoint Central</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Endpoint Central agent.</p>
@@ -22915,7 +22324,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Endpoint Central',
-        description: 'When a device is removed from Endpoint Central SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Endpoint Central</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -22951,7 +22359,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -22990,7 +22397,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-op-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Endpoint Central console. This speeds up ticket resolution for software-related requests.</p>
@@ -23031,7 +22437,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-op-software-metering': {
         title: 'Software Metering Data to ServiceNow – Endpoint Central',
-        description: 'Posts software metering (usage) data from Endpoint Central to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Endpoint Central</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -23069,7 +22474,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -23108,7 +22512,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Endpoint Central console. This speeds up ticket resolution for software-related requests.</p>
@@ -23149,7 +22552,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Endpoint Central',
-        description: 'Posts software metering (usage) data from Endpoint Central to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Endpoint Central</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -23187,7 +22589,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Endpoint Central',
-        description: 'Forwards action log/audit data from Endpoint Central to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Endpoint Central</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Endpoint Central.</p>
@@ -23227,7 +22628,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Endpoint Central',
-        description: 'Forwards action log/audit data from Endpoint Central to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Endpoint Central</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Endpoint Central.</p>
@@ -23267,7 +22667,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Endpoint Central',
-        description: 'Syncs vulnerability scan data from Endpoint Central to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Endpoint Central</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -23304,7 +22703,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Endpoint Central',
-        description: 'Syncs vulnerability scan data from Endpoint Central to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Endpoint Central</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -23341,7 +22739,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-syslog-cloud-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Endpoint Central',
-        description: 'Forwards action log/audit data from Endpoint Central to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Endpoint Central</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -23380,7 +22777,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-syslog-op-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Endpoint Central',
-        description: 'Forwards action log/audit data from Endpoint Central to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Endpoint Central</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -23419,7 +22815,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Endpoint Central console. This speeds up ticket resolution for software-related requests.</p>
@@ -23460,7 +22855,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -23498,7 +22892,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -23540,7 +22933,6 @@ const FEATURE_DETAILS = {
     },
     'ec-op-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -23579,7 +22971,6 @@ const FEATURE_DETAILS = {
     },
     'ec-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -23617,7 +23008,6 @@ const FEATURE_DETAILS = {
     },
     'ec-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -23655,7 +23045,6 @@ const FEATURE_DETAILS = {
     },
     'ec-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -23693,7 +23082,6 @@ const FEATURE_DETAILS = {
     },
     'ec-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -23731,7 +23119,6 @@ const FEATURE_DETAILS = {
     },
     'ec-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -23769,7 +23156,6 @@ const FEATURE_DETAILS = {
     },
     'ec-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Endpoint Central',
-        description: 'Automatically syncs default data categories from Endpoint Central to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Endpoint Central</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -23807,7 +23193,6 @@ const FEATURE_DETAILS = {
     },
     'ec-qradar-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Endpoint Central',
-        description: 'Forwards audit log data from Endpoint Central to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Endpoint Central</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Endpoint Central.</p>
@@ -23839,7 +23224,6 @@ const FEATURE_DETAILS = {
     },
     'ec-qradar-op-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Endpoint Central',
-        description: 'Forwards audit log data from Endpoint Central to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Endpoint Central</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Endpoint Central.</p>
@@ -23871,7 +23255,6 @@ const FEATURE_DETAILS = {
     },
     'ec-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Endpoint Central → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Endpoint Central Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Endpoint Central</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -23915,7 +23298,6 @@ const FEATURE_DETAILS = {
     },
     'ec-sdp-deploy-software': {
         title: 'Deploy Software from ServiceDesk Plus Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceDesk Plus</strong> ticket without switching to the Endpoint Central console. This speeds up ticket resolution for software-related requests.</p>
@@ -23956,7 +23338,6 @@ const FEATURE_DETAILS = {
     },
     'ec-sdp-iframe': {
         title: 'Load Endpoint Central iFrame in ServiceDesk Plus',
-        description: 'Embed the Endpoint Central console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Endpoint Central</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Endpoint Central features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -23996,7 +23377,6 @@ const FEATURE_DETAILS = {
     },
     'ec-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Endpoint Central → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Endpoint Central to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Endpoint Central</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -24038,7 +23418,6 @@ const FEATURE_DETAILS = {
     },
     'ec-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Endpoint Central → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Endpoint Central to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Endpoint Central</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -24080,7 +23459,6 @@ const FEATURE_DETAILS = {
     },
     'ec-sdp-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -24122,7 +23500,6 @@ const FEATURE_DETAILS = {
     },
     'ec-sdp-ssp-beta': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'Requests raised by end users via the Endpoint Central Self-Service Portal are created as ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Endpoint Central Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Technicians can then process the request through the standard ServiceDesk Plus ticket workflow.</p>
@@ -24162,7 +23539,6 @@ const FEATURE_DETAILS = {
     },
     'ec-sdp-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -24201,7 +23577,6 @@ const FEATURE_DETAILS = {
     },
     'ec-sdp-trayicon-beta': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'End-user requests submitted via the Endpoint Central system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Endpoint Central agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -24240,7 +23615,6 @@ const FEATURE_DETAILS = {
     },
     'ec-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Endpoint Central',
-        description: 'Posts hardware and software asset data from Endpoint Central to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Endpoint Central</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Endpoint Central agent.</p>
@@ -24280,7 +23654,6 @@ const FEATURE_DETAILS = {
     },
     'ec-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Endpoint Central',
-        description: 'When a device is removed from Endpoint Central SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Endpoint Central</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -24316,7 +23689,6 @@ const FEATURE_DETAILS = {
     },
     'ec-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -24355,7 +23727,6 @@ const FEATURE_DETAILS = {
     },
     'ec-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Endpoint Central',
-        description: 'Posts hardware and software asset data from Endpoint Central to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Endpoint Central</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Endpoint Central agent.</p>
@@ -24395,7 +23766,6 @@ const FEATURE_DETAILS = {
     },
     'ec-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Endpoint Central',
-        description: 'When a device is removed from Endpoint Central SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Endpoint Central</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -24431,7 +23801,6 @@ const FEATURE_DETAILS = {
     },
     'ec-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Endpoint Central agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -24470,7 +23839,6 @@ const FEATURE_DETAILS = {
     },
     'ec-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Endpoint Central console. This speeds up ticket resolution for software-related requests.</p>
@@ -24511,7 +23879,6 @@ const FEATURE_DETAILS = {
     },
     'ec-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Endpoint Central',
-        description: 'Posts software metering (usage) data from Endpoint Central to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Endpoint Central</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -24549,7 +23916,6 @@ const FEATURE_DETAILS = {
     },
     'ec-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Endpoint Central',
-        description: 'Forwards action log/audit data from Endpoint Central to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Endpoint Central</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Endpoint Central.</p>
@@ -24589,7 +23955,6 @@ const FEATURE_DETAILS = {
     },
     'ec-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Endpoint Central',
-        description: 'Forwards action log/audit data from Endpoint Central to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Endpoint Central</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Endpoint Central.</p>
@@ -24629,7 +23994,6 @@ const FEATURE_DETAILS = {
     },
     'ec-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Endpoint Central',
-        description: 'Syncs vulnerability scan data from Endpoint Central to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Endpoint Central</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -24666,7 +24030,6 @@ const FEATURE_DETAILS = {
     },
     'ec-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Endpoint Central',
-        description: 'Syncs vulnerability scan data from Endpoint Central to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Endpoint Central</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -24703,7 +24066,6 @@ const FEATURE_DETAILS = {
     },
     'ec-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Endpoint Central console. This speeds up ticket resolution for software-related requests.</p>
@@ -24744,7 +24106,6 @@ const FEATURE_DETAILS = {
     },
     'ec-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -24782,7 +24143,6 @@ const FEATURE_DETAILS = {
     },
     'ec-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -24824,7 +24184,6 @@ const FEATURE_DETAILS = {
     },
     'ec-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -24863,7 +24222,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Mobile Device Manager Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Mobile Device Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Mobile Device Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -24907,7 +24265,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ae-deploy-software': {
         title: 'Deploy Software from AssetExplorer Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>AssetExplorer</strong> ticket without switching to the Mobile Device Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -24948,7 +24305,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ae-iframe': {
         title: 'Load Mobile Device Manager Plus iFrame in AssetExplorer',
-        description: 'Embed the Mobile Device Manager Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Mobile Device Manager Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Mobile Device Manager Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -24988,7 +24344,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Mobile Device Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Mobile Device Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Mobile Device Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -25030,7 +24385,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Mobile Device Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Mobile Device Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Mobile Device Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -25072,7 +24426,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ae-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -25114,7 +24467,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ae-ssp-beta': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets (Beta)',
-        description: 'Requests raised by end users via the Mobile Device Manager Plus Self-Service Portal are created as AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Mobile Device Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Technicians can then process the request through the standard AssetExplorer ticket workflow.</p>
@@ -25154,7 +24506,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ae-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -25193,7 +24544,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ae-trayicon-beta': {
         title: 'Trayicon Requests as AssetExplorer Tickets (Beta)',
-        description: 'End-user requests submitted via the Mobile Device Manager Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Mobile Device Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -25232,7 +24582,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -25270,7 +24619,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -25308,7 +24656,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -25346,7 +24693,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -25382,7 +24728,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -25418,7 +24763,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -25454,7 +24798,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -25490,7 +24833,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ela-comparators': {
         title: 'ELA Comparators for Mobile Device Manager Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Mobile Device Manager Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Mobile Device Manager Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -25526,7 +24868,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ela-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Mobile Device Manager Plus',
-        description: 'Patch compliance data from Mobile Device Manager Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Mobile Device Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -25564,7 +24905,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-ela-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Mobile Device Manager Plus',
-        description: 'Vulnerability and system misconfiguration data from Mobile Device Manager Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Mobile Device Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -25601,7 +24941,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Mobile Device Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -25642,7 +24981,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -25680,7 +25018,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -25722,7 +25059,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -25761,7 +25097,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Mobile Device Manager Plus',
-        description: 'Pulls asset inventory data from Mobile Device Manager Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Mobile Device Manager Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -25797,7 +25132,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-jira-iframe': {
         title: 'Load Mobile Device Manager Plus iFrame in Jira',
-        description: 'Embed the Mobile Device Manager Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Mobile Device Manager Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Mobile Device Manager Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -25837,7 +25171,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -25879,7 +25212,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -25918,7 +25250,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Mobile Device Manager Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Mobile Device Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Mobile Device Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -25962,7 +25293,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -26001,7 +25331,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Mobile Device Manager Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Mobile Device Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -26038,7 +25367,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Mobile Device Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Mobile Device Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Mobile Device Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -26080,7 +25408,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-asset-removal': {
         title: 'Asset Removal Action – Mobile Device Manager Plus → AssetExplorer',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Mobile Device Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Mobile Device Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -26124,7 +25451,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -26163,7 +25489,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-deploy-packages': {
         title: 'Deploy Software Packages from AssetExplorer Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Mobile Device Manager Plus) to managed endpoints directly from within <strong>AssetExplorer</strong> tickets. This streamlines software provisioning without requiring access to the Mobile Device Manager Plus console.</p>
@@ -26200,7 +25525,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-deploy-templates': {
         title: 'Deploy Configuration Templates from AssetExplorer Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>AssetExplorer</strong> to managed endpoints. Templates are created in Mobile Device Manager Plus and made available through the integration.</p>
@@ -26237,7 +25561,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-iframe': {
         title: 'Load Mobile Device Manager Plus iFrame in AssetExplorer',
-        description: 'Embed the Mobile Device Manager Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Mobile Device Manager Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Mobile Device Manager Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -26277,7 +25600,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Mobile Device Manager Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Mobile Device Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -26314,7 +25636,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Mobile Device Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Mobile Device Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Mobile Device Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -26356,7 +25677,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-prohibited-software': {
         title: 'Prohibited Software Alerts as AssetExplorer Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When the Mobile Device Manager Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>AssetExplorer</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -26393,7 +25713,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -26435,7 +25754,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets',
-        description: 'Requests raised by end users via the Mobile Device Manager Plus Self-Service Portal are created as AssetExplorer tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Mobile Device Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Upon approval of the ticket in AssetExplorer, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -26475,7 +25793,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -26514,7 +25831,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-op-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Mobile Device Manager Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Mobile Device Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -26553,7 +25869,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-software-removal': {
         title: 'Software Removal Sync – Mobile Device Manager Plus → AssetExplorer',
-        description: 'When commercial software is removed from Mobile Device Manager Plus, the corresponding software entry is updated in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Mobile Device Manager Plus's software catalog, this feature automatically updates the corresponding software record in <strong>AssetExplorer</strong>. This keeps the asset management software inventory accurate.</p>
@@ -26587,7 +25902,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ae-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Mobile Device Manager Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Mobile Device Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -26626,7 +25940,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -26664,7 +25977,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -26702,7 +26014,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -26740,7 +26051,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-op-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -26778,7 +26088,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-op-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -26816,7 +26125,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-op-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -26854,7 +26162,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-op-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -26890,7 +26197,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-op-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -26926,7 +26232,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-op-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -26962,7 +26267,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-op-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -26998,7 +26302,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -27034,7 +26337,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -27070,7 +26372,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -27106,7 +26407,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Mobile Device Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Mobile Device Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Mobile Device Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -27142,7 +26442,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ela-op-audit-logs': {
         title: 'Audit Log Sync to EventLog Analyzer – Mobile Device Manager Plus',
-        description: 'Forwards audit log data from Mobile Device Manager Plus to EventLog Analyzer for log management and compliance.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer data (audit logs)</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>EventLog Analyzer (ELA)</strong>. ELA processes these logs for compliance reporting, security analysis, and real-time alerting on administrative actions.</p>
@@ -27179,7 +26478,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ela-op-comparators': {
         title: 'ELA Comparators for Mobile Device Manager Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Mobile Device Manager Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Mobile Device Manager Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -27215,7 +26513,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ela-op-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Mobile Device Manager Plus',
-        description: 'Patch compliance data from Mobile Device Manager Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Mobile Device Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -27253,7 +26550,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-ela-op-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Mobile Device Manager Plus',
-        description: 'Vulnerability and system misconfiguration data from Mobile Device Manager Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Mobile Device Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -27290,7 +26586,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Mobile Device Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -27331,7 +26626,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -27369,7 +26663,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -27411,7 +26704,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -27450,7 +26742,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Mobile Device Manager Plus',
-        description: 'Pulls asset inventory data from Mobile Device Manager Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Mobile Device Manager Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -27486,7 +26777,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-jira-iframe': {
         title: 'Load Mobile Device Manager Plus iFrame in Jira',
-        description: 'Embed the Mobile Device Manager Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Mobile Device Manager Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Mobile Device Manager Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -27526,7 +26816,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-jira-op-asset-data': {
         title: 'Asset Data Sync to Jira – Mobile Device Manager Plus',
-        description: 'Pulls asset inventory data from Mobile Device Manager Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Mobile Device Manager Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -27562,7 +26851,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-jira-op-iframe': {
         title: 'Load Mobile Device Manager Plus iFrame in Jira',
-        description: 'Embed the Mobile Device Manager Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Mobile Device Manager Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Mobile Device Manager Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -27602,7 +26890,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-jira-op-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -27644,7 +26931,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-jira-op-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -27683,7 +26969,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -27725,7 +27010,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -27764,7 +27048,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -27802,7 +27085,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -27840,7 +27122,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -27878,7 +27159,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -27916,7 +27196,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -27954,7 +27233,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -27992,7 +27270,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-qradar-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Mobile Device Manager Plus',
-        description: 'Forwards action log/audit data from Mobile Device Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Mobile Device Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -28031,7 +27308,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-qradar-op-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Mobile Device Manager Plus',
-        description: 'Forwards action log/audit data from Mobile Device Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Mobile Device Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -28070,7 +27346,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Mobile Device Manager Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Mobile Device Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Mobile Device Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -28114,7 +27389,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -28153,7 +27427,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Mobile Device Manager Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Mobile Device Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -28190,7 +27463,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Mobile Device Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Mobile Device Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -28232,7 +27504,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-add-to-groups': {
         title: 'Add Devices to Groups from ServiceDesk Plus',
-        description: 'Add mobile devices to management groups from ServiceDesk Plus tickets for simplified management.',
         content: `
             <h3>Description</h3>
             <p>Technicians can add managed mobile devices to specific <strong>device groups</strong> in Mobile Device Manager Plus directly from <strong>ServiceDesk Plus</strong> tickets. Group membership determines which policies and apps are applied to the device.</p>
@@ -28265,7 +27536,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-asset-removal': {
         title: 'Asset Removal Action – Mobile Device Manager Plus → ServiceDesk Plus',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Mobile Device Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Mobile Device Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -28309,7 +27579,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-assign-users': {
         title: 'Assign Users to Managed Devices from ServiceDesk Plus',
-        description: 'Assign users to mobile devices from ServiceDesk Plus tickets for ownership tracking.',
         content: `
             <h3>Description</h3>
             <p>Technicians can assign users to managed mobile devices directly from <strong>ServiceDesk Plus</strong> tickets. This updates the device ownership record in Mobile Device Manager Plus.</p>
@@ -28342,7 +27611,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -28381,7 +27649,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-configure-profiles': {
         title: 'Configure Devices via Profiles from ServiceDesk Plus',
-        description: 'Associate and deploy configuration profiles to mobile devices from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can associate and deploy <strong>configuration profiles</strong> (Wi-Fi, VPN, email, restrictions, etc.) to mobile devices directly from <strong>ServiceDesk Plus</strong> tickets, without switching to the MDM console.</p>
@@ -28415,7 +27682,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-deploy-packages': {
         title: 'Deploy Software Packages from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Mobile Device Manager Plus) to managed endpoints directly from within <strong>ServiceDesk Plus</strong> tickets. This streamlines software provisioning without requiring access to the Mobile Device Manager Plus console.</p>
@@ -28452,7 +27718,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-deploy-templates': {
         title: 'Deploy Configuration Templates from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>ServiceDesk Plus</strong> to managed endpoints. Templates are created in Mobile Device Manager Plus and made available through the integration.</p>
@@ -28489,7 +27754,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-geo-tracking': {
         title: 'Geo-Tracking / Locate Device from ServiceDesk Plus',
-        description: 'Identify the location of a mobile device remotely using geo-tracking from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely locate a managed mobile device using <strong>geo-tracking</strong> directly from <strong>ServiceDesk Plus</strong> tickets. This is useful for tracking lost or stolen devices.</p>
@@ -28526,7 +27790,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-iframe': {
         title: 'Load Mobile Device Manager Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Mobile Device Manager Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Mobile Device Manager Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Mobile Device Manager Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -28566,7 +27829,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-install-apps': {
         title: 'Install Apps on Mobile Devices from ServiceDesk Plus',
-        description: 'Remotely distribute and install applications on mobile devices from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely install applications on managed mobile devices by triggering app distribution from <strong>ServiceDesk Plus</strong> tickets. Apps are sourced from the Mobile Device Manager Plus app catalog.</p>
@@ -28600,7 +27862,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Mobile Device Manager Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Mobile Device Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -28637,7 +27898,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Mobile Device Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Mobile Device Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -28679,7 +27939,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-prohibited-software': {
         title: 'Prohibited Software Alerts as ServiceDesk Plus Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When the Mobile Device Manager Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>ServiceDesk Plus</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -28716,7 +27975,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -28758,7 +28016,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets',
-        description: 'Requests raised by end users via the Mobile Device Manager Plus Self-Service Portal are created as ServiceDesk Plus tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Mobile Device Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Upon approval of the ticket in ServiceDesk Plus, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -28798,7 +28055,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -28837,7 +28093,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Mobile Device Manager Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Mobile Device Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -28876,7 +28131,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-op-wipe-remove': {
         title: 'Wipe and Remove Management from ServiceDesk Plus',
-        description: 'Remotely wipe and remove device management from mobile devices via ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to initiate a <strong>remote wipe</strong> and <strong>remove device management</strong> on mobile devices directly from <strong>ServiceDesk Plus</strong> tickets. This is typically used for lost/stolen devices or when an employee leaves the organization.</p>
@@ -28914,7 +28168,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-software-removal': {
         title: 'Software Removal Sync – Mobile Device Manager Plus → ServiceDesk Plus',
-        description: 'When commercial software is removed from Mobile Device Manager Plus, the corresponding software entry is updated in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Mobile Device Manager Plus's software catalog, this feature automatically updates the corresponding software record in <strong>ServiceDesk Plus</strong>. This keeps the asset management software inventory accurate.</p>
@@ -28948,7 +28201,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-sdp-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Mobile Device Manager Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Mobile Device Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -28987,7 +28239,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Mobile Device Manager Plus',
-        description: 'Posts hardware and software asset data from Mobile Device Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Mobile Device Manager Plus agent.</p>
@@ -29027,7 +28278,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Mobile Device Manager Plus',
-        description: 'When a device is removed from Mobile Device Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Mobile Device Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -29063,7 +28313,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-basic-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Mobile Device Manager Plus',
-        description: 'Posts hardware and software asset data from Mobile Device Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Mobile Device Manager Plus agent.</p>
@@ -29103,7 +28352,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-basic-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Mobile Device Manager Plus',
-        description: 'When a device is removed from Mobile Device Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Mobile Device Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -29139,7 +28387,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-basic-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -29178,7 +28425,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -29217,7 +28463,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Mobile Device Manager Plus',
-        description: 'Posts hardware and software asset data from Mobile Device Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Mobile Device Manager Plus agent.</p>
@@ -29257,7 +28502,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Mobile Device Manager Plus',
-        description: 'When a device is removed from Mobile Device Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Mobile Device Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -29293,7 +28537,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Mobile Device Manager Plus',
-        description: 'Posts hardware and software asset data from Mobile Device Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Mobile Device Manager Plus agent.</p>
@@ -29333,7 +28576,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Mobile Device Manager Plus',
-        description: 'When a device is removed from Mobile Device Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Mobile Device Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -29369,7 +28611,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -29408,7 +28649,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-op-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Mobile Device Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -29449,7 +28689,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-op-software-metering': {
         title: 'Software Metering Data to ServiceNow – Mobile Device Manager Plus',
-        description: 'Posts software metering (usage) data from Mobile Device Manager Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -29487,7 +28726,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -29526,7 +28764,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Mobile Device Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -29567,7 +28804,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Mobile Device Manager Plus',
-        description: 'Posts software metering (usage) data from Mobile Device Manager Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -29605,7 +28841,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Mobile Device Manager Plus',
-        description: 'Forwards action log/audit data from Mobile Device Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Mobile Device Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Mobile Device Manager Plus.</p>
@@ -29645,7 +28880,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Mobile Device Manager Plus',
-        description: 'Forwards action log/audit data from Mobile Device Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Mobile Device Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Mobile Device Manager Plus.</p>
@@ -29685,7 +28919,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Mobile Device Manager Plus',
-        description: 'Syncs vulnerability scan data from Mobile Device Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -29722,7 +28955,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Mobile Device Manager Plus',
-        description: 'Syncs vulnerability scan data from Mobile Device Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -29759,7 +28991,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-syslog-cloud-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Mobile Device Manager Plus',
-        description: 'Forwards action log/audit data from Mobile Device Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Mobile Device Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -29798,7 +29029,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-syslog-op-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Mobile Device Manager Plus',
-        description: 'Forwards action log/audit data from Mobile Device Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Mobile Device Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -29837,7 +29067,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Mobile Device Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -29878,7 +29107,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -29916,7 +29144,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -29958,7 +29185,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-op-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -29997,7 +29223,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -30035,7 +29260,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -30073,7 +29297,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -30111,7 +29334,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -30149,7 +29371,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -30187,7 +29408,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Mobile Device Manager Plus',
-        description: 'Automatically syncs default data categories from Mobile Device Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -30225,7 +29445,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-qradar-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Mobile Device Manager Plus',
-        description: 'Forwards audit log data from Mobile Device Manager Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Mobile Device Manager Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Mobile Device Manager Plus.</p>
@@ -30257,7 +29476,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-qradar-op-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Mobile Device Manager Plus',
-        description: 'Forwards audit log data from Mobile Device Manager Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Mobile Device Manager Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Mobile Device Manager Plus.</p>
@@ -30289,7 +29507,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-sdp-asset-removal': {
         title: 'Asset Removal Action – Mobile Device Manager Plus → ServiceDesk Plus',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Mobile Device Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Mobile Device Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -30333,7 +29550,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-sdp-deploy-software': {
         title: 'Deploy Software from ServiceDesk Plus Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceDesk Plus</strong> ticket without switching to the Mobile Device Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -30374,7 +29590,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-sdp-iframe': {
         title: 'Load Mobile Device Manager Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Mobile Device Manager Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Mobile Device Manager Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Mobile Device Manager Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -30414,7 +29629,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Mobile Device Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Mobile Device Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -30456,7 +29670,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Mobile Device Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Mobile Device Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -30498,7 +29711,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-sdp-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -30540,7 +29752,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-sdp-ssp-beta': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'Requests raised by end users via the Mobile Device Manager Plus Self-Service Portal are created as ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Mobile Device Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Technicians can then process the request through the standard ServiceDesk Plus ticket workflow.</p>
@@ -30580,7 +29791,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-sdp-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -30619,7 +29829,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-sdp-trayicon-beta': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'End-user requests submitted via the Mobile Device Manager Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Mobile Device Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -30658,7 +29867,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Mobile Device Manager Plus',
-        description: 'Posts hardware and software asset data from Mobile Device Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Mobile Device Manager Plus agent.</p>
@@ -30698,7 +29906,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Mobile Device Manager Plus',
-        description: 'When a device is removed from Mobile Device Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Mobile Device Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -30734,7 +29941,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -30773,7 +29979,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Mobile Device Manager Plus',
-        description: 'Posts hardware and software asset data from Mobile Device Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Mobile Device Manager Plus agent.</p>
@@ -30813,7 +30018,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Mobile Device Manager Plus',
-        description: 'When a device is removed from Mobile Device Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Mobile Device Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -30849,7 +30053,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Mobile Device Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -30888,7 +30091,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Mobile Device Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -30929,7 +30131,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Mobile Device Manager Plus',
-        description: 'Posts software metering (usage) data from Mobile Device Manager Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Mobile Device Manager Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -30967,7 +30168,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Mobile Device Manager Plus',
-        description: 'Forwards action log/audit data from Mobile Device Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Mobile Device Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Mobile Device Manager Plus.</p>
@@ -31007,7 +30207,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Mobile Device Manager Plus',
-        description: 'Forwards action log/audit data from Mobile Device Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Mobile Device Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Mobile Device Manager Plus.</p>
@@ -31047,7 +30246,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Mobile Device Manager Plus',
-        description: 'Syncs vulnerability scan data from Mobile Device Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -31084,7 +30282,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Mobile Device Manager Plus',
-        description: 'Syncs vulnerability scan data from Mobile Device Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Mobile Device Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -31121,7 +30318,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Mobile Device Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -31162,7 +30358,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -31200,7 +30395,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -31242,7 +30436,6 @@ const FEATURE_DETAILS = {
     },
     'mdm-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -31281,7 +30474,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Patch Connect Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Patch Connect Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Connect Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -31325,7 +30517,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ae-deploy-software': {
         title: 'Deploy Software from AssetExplorer Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>AssetExplorer</strong> ticket without switching to the Patch Connect Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -31366,7 +30557,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ae-iframe': {
         title: 'Load Patch Connect Plus iFrame in AssetExplorer',
-        description: 'Embed the Patch Connect Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Connect Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Patch Connect Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -31406,7 +30596,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Connect Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Patch Connect Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Connect Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -31448,7 +30637,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Connect Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Patch Connect Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Connect Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -31490,7 +30678,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ae-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -31532,7 +30719,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ae-ssp-beta': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets (Beta)',
-        description: 'Requests raised by end users via the Patch Connect Plus Self-Service Portal are created as AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Patch Connect Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Technicians can then process the request through the standard AssetExplorer ticket workflow.</p>
@@ -31572,7 +30758,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ae-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -31611,7 +30796,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ae-trayicon-beta': {
         title: 'Trayicon Requests as AssetExplorer Tickets (Beta)',
-        description: 'End-user requests submitted via the Patch Connect Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Connect Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -31650,7 +30834,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -31688,7 +30871,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -31726,7 +30908,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -31764,7 +30945,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -31800,7 +30980,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -31836,7 +31015,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -31872,7 +31050,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -31908,7 +31085,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ela-comparators': {
         title: 'ELA Comparators for Patch Connect Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Patch Connect Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Patch Connect Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -31944,7 +31120,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ela-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Patch Connect Plus',
-        description: 'Patch compliance data from Patch Connect Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Patch Connect Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -31982,7 +31157,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-ela-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Patch Connect Plus',
-        description: 'Vulnerability and system misconfiguration data from Patch Connect Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Patch Connect Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -32019,7 +31193,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Patch Connect Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -32060,7 +31233,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -32098,7 +31270,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -32140,7 +31311,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -32179,7 +31349,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Patch Connect Plus',
-        description: 'Pulls asset inventory data from Patch Connect Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Patch Connect Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -32215,7 +31384,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-jira-iframe': {
         title: 'Load Patch Connect Plus iFrame in Jira',
-        description: 'Embed the Patch Connect Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Connect Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Patch Connect Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -32255,7 +31423,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -32297,7 +31464,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -32336,7 +31502,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Patch Connect Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Patch Connect Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Connect Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -32380,7 +31545,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -32419,7 +31583,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Patch Connect Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Patch Connect Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -32456,7 +31619,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Connect Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Patch Connect Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Connect Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -32498,7 +31660,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-asset-removal': {
         title: 'Asset Removal Action – Patch Connect Plus → AssetExplorer',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Patch Connect Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Connect Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -32542,7 +31703,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -32581,7 +31741,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-deploy-packages': {
         title: 'Deploy Software Packages from AssetExplorer Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Patch Connect Plus) to managed endpoints directly from within <strong>AssetExplorer</strong> tickets. This streamlines software provisioning without requiring access to the Patch Connect Plus console.</p>
@@ -32618,7 +31777,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-deploy-templates': {
         title: 'Deploy Configuration Templates from AssetExplorer Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>AssetExplorer</strong> to managed endpoints. Templates are created in Patch Connect Plus and made available through the integration.</p>
@@ -32655,7 +31813,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-iframe': {
         title: 'Load Patch Connect Plus iFrame in AssetExplorer',
-        description: 'Embed the Patch Connect Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Connect Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Patch Connect Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -32695,7 +31852,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Patch Connect Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Patch Connect Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -32732,7 +31888,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Connect Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Patch Connect Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Connect Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -32774,7 +31929,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-prohibited-software': {
         title: 'Prohibited Software Alerts as AssetExplorer Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When the Patch Connect Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>AssetExplorer</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -32811,7 +31965,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -32853,7 +32006,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets',
-        description: 'Requests raised by end users via the Patch Connect Plus Self-Service Portal are created as AssetExplorer tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Patch Connect Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Upon approval of the ticket in AssetExplorer, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -32893,7 +32045,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -32932,7 +32083,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-op-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Patch Connect Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Connect Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -32971,7 +32121,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-software-removal': {
         title: 'Software Removal Sync – Patch Connect Plus → AssetExplorer',
-        description: 'When commercial software is removed from Patch Connect Plus, the corresponding software entry is updated in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Patch Connect Plus's software catalog, this feature automatically updates the corresponding software record in <strong>AssetExplorer</strong>. This keeps the asset management software inventory accurate.</p>
@@ -33005,7 +32154,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ae-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Patch Connect Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Connect Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -33044,7 +32192,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -33082,7 +32229,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -33120,7 +32266,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -33158,7 +32303,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-op-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -33196,7 +32340,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-op-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -33234,7 +32377,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-op-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -33272,7 +32414,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-op-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -33308,7 +32449,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-op-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -33344,7 +32484,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-op-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -33380,7 +32519,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-op-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -33416,7 +32554,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -33452,7 +32589,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -33488,7 +32624,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -33524,7 +32659,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Patch Connect Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Connect Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Connect Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -33560,7 +32694,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ela-op-audit-logs': {
         title: 'Audit Log Sync to EventLog Analyzer – Patch Connect Plus',
-        description: 'Forwards audit log data from Patch Connect Plus to EventLog Analyzer for log management and compliance.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Connect Plus</strong> to <strong>EventLog Analyzer (ELA)</strong>. ELA processes these logs for compliance reporting, security analysis, and real-time alerting on administrative actions.</p>
@@ -33597,7 +32730,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ela-op-comparators': {
         title: 'ELA Comparators for Patch Connect Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Patch Connect Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Patch Connect Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -33633,7 +32765,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ela-op-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Patch Connect Plus',
-        description: 'Patch compliance data from Patch Connect Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Patch Connect Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -33671,7 +32802,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-ela-op-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Patch Connect Plus',
-        description: 'Vulnerability and system misconfiguration data from Patch Connect Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Patch Connect Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -33708,7 +32838,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Patch Connect Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -33749,7 +32878,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -33787,7 +32915,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -33829,7 +32956,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -33868,7 +32994,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Patch Connect Plus',
-        description: 'Pulls asset inventory data from Patch Connect Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Patch Connect Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -33904,7 +33029,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-jira-iframe': {
         title: 'Load Patch Connect Plus iFrame in Jira',
-        description: 'Embed the Patch Connect Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Connect Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Patch Connect Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -33944,7 +33068,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-jira-op-asset-data': {
         title: 'Asset Data Sync to Jira – Patch Connect Plus',
-        description: 'Pulls asset inventory data from Patch Connect Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Patch Connect Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -33980,7 +33103,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-jira-op-iframe': {
         title: 'Load Patch Connect Plus iFrame in Jira',
-        description: 'Embed the Patch Connect Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Connect Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Patch Connect Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -34020,7 +33142,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-jira-op-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -34062,7 +33183,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-jira-op-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -34101,7 +33221,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -34143,7 +33262,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -34182,7 +33300,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -34220,7 +33337,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -34258,7 +33374,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -34296,7 +33411,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -34334,7 +33448,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -34372,7 +33485,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -34410,7 +33522,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-qradar-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Patch Connect Plus',
-        description: 'Forwards action log/audit data from Patch Connect Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Connect Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -34449,7 +33560,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-qradar-op-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Patch Connect Plus',
-        description: 'Forwards action log/audit data from Patch Connect Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Connect Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -34488,7 +33598,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Patch Connect Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Patch Connect Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Connect Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -34532,7 +33641,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -34571,7 +33679,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Patch Connect Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Patch Connect Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -34608,7 +33715,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Connect Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Patch Connect Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Connect Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -34650,7 +33756,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-asset-removal': {
         title: 'Asset Removal Action – Patch Connect Plus → ServiceDesk Plus',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Patch Connect Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Connect Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -34694,7 +33799,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -34733,7 +33837,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-deploy-packages': {
         title: 'Deploy Software Packages from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Patch Connect Plus) to managed endpoints directly from within <strong>ServiceDesk Plus</strong> tickets. This streamlines software provisioning without requiring access to the Patch Connect Plus console.</p>
@@ -34770,7 +33873,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-deploy-templates': {
         title: 'Deploy Configuration Templates from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>ServiceDesk Plus</strong> to managed endpoints. Templates are created in Patch Connect Plus and made available through the integration.</p>
@@ -34807,7 +33909,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-iframe': {
         title: 'Load Patch Connect Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Patch Connect Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Connect Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Patch Connect Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -34847,7 +33948,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Patch Connect Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Patch Connect Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -34884,7 +33984,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Connect Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Patch Connect Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Connect Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -34926,7 +34025,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-prohibited-software': {
         title: 'Prohibited Software Alerts as ServiceDesk Plus Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When the Patch Connect Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>ServiceDesk Plus</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -34963,7 +34061,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -35005,7 +34102,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets',
-        description: 'Requests raised by end users via the Patch Connect Plus Self-Service Portal are created as ServiceDesk Plus tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Patch Connect Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Upon approval of the ticket in ServiceDesk Plus, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -35045,7 +34141,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -35084,7 +34179,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-op-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Patch Connect Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Connect Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -35123,7 +34217,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-software-removal': {
         title: 'Software Removal Sync – Patch Connect Plus → ServiceDesk Plus',
-        description: 'When commercial software is removed from Patch Connect Plus, the corresponding software entry is updated in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Patch Connect Plus's software catalog, this feature automatically updates the corresponding software record in <strong>ServiceDesk Plus</strong>. This keeps the asset management software inventory accurate.</p>
@@ -35157,7 +34250,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-sdp-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Patch Connect Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Connect Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -35196,7 +34288,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Connect Plus',
-        description: 'Posts hardware and software asset data from Patch Connect Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Connect Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Connect Plus agent.</p>
@@ -35236,7 +34327,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Connect Plus',
-        description: 'When a device is removed from Patch Connect Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Connect Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -35272,7 +34362,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-basic-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Connect Plus',
-        description: 'Posts hardware and software asset data from Patch Connect Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Connect Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Connect Plus agent.</p>
@@ -35312,7 +34401,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-basic-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Connect Plus',
-        description: 'When a device is removed from Patch Connect Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Connect Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -35348,7 +34436,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-basic-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -35387,7 +34474,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -35426,7 +34512,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Connect Plus',
-        description: 'Posts hardware and software asset data from Patch Connect Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Connect Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Connect Plus agent.</p>
@@ -35466,7 +34551,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Connect Plus',
-        description: 'When a device is removed from Patch Connect Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Connect Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -35502,7 +34586,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Connect Plus',
-        description: 'Posts hardware and software asset data from Patch Connect Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Connect Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Connect Plus agent.</p>
@@ -35542,7 +34625,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Connect Plus',
-        description: 'When a device is removed from Patch Connect Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Connect Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -35578,7 +34660,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -35617,7 +34698,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-op-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Patch Connect Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -35658,7 +34738,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-op-software-metering': {
         title: 'Software Metering Data to ServiceNow – Patch Connect Plus',
-        description: 'Posts software metering (usage) data from Patch Connect Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Patch Connect Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -35696,7 +34775,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -35735,7 +34813,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Patch Connect Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -35776,7 +34853,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Patch Connect Plus',
-        description: 'Posts software metering (usage) data from Patch Connect Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Patch Connect Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -35814,7 +34890,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Patch Connect Plus',
-        description: 'Forwards action log/audit data from Patch Connect Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Connect Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Patch Connect Plus.</p>
@@ -35854,7 +34929,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Patch Connect Plus',
-        description: 'Forwards action log/audit data from Patch Connect Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Connect Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Patch Connect Plus.</p>
@@ -35894,7 +34968,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Patch Connect Plus',
-        description: 'Syncs vulnerability scan data from Patch Connect Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Patch Connect Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -35931,7 +35004,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Patch Connect Plus',
-        description: 'Syncs vulnerability scan data from Patch Connect Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Patch Connect Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -35968,7 +35040,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-syslog-cloud-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Patch Connect Plus',
-        description: 'Forwards action log/audit data from Patch Connect Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Connect Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -36007,7 +35078,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-syslog-op-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Patch Connect Plus',
-        description: 'Forwards action log/audit data from Patch Connect Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Connect Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -36046,7 +35116,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Patch Connect Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -36087,7 +35156,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -36125,7 +35193,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -36167,7 +35234,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-op-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -36206,7 +35272,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -36244,7 +35309,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -36282,7 +35346,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -36320,7 +35383,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -36358,7 +35420,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -36396,7 +35457,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Patch Connect Plus',
-        description: 'Automatically syncs default data categories from Patch Connect Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Connect Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -36434,7 +35494,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-qradar-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Patch Connect Plus',
-        description: 'Forwards audit log data from Patch Connect Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Connect Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Patch Connect Plus.</p>
@@ -36466,7 +35525,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-qradar-op-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Patch Connect Plus',
-        description: 'Forwards audit log data from Patch Connect Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Connect Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Patch Connect Plus.</p>
@@ -36498,7 +35556,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Patch Connect Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Patch Connect Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Connect Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -36542,7 +35599,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-sdp-deploy-software': {
         title: 'Deploy Software from ServiceDesk Plus Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceDesk Plus</strong> ticket without switching to the Patch Connect Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -36583,7 +35639,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-sdp-iframe': {
         title: 'Load Patch Connect Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Patch Connect Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Connect Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Patch Connect Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -36623,7 +35678,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Connect Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Patch Connect Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Connect Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -36665,7 +35719,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Connect Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Patch Connect Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Connect Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -36707,7 +35760,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-sdp-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -36749,7 +35801,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-sdp-ssp-beta': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'Requests raised by end users via the Patch Connect Plus Self-Service Portal are created as ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Patch Connect Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Technicians can then process the request through the standard ServiceDesk Plus ticket workflow.</p>
@@ -36789,7 +35840,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-sdp-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -36828,7 +35878,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-sdp-trayicon-beta': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'End-user requests submitted via the Patch Connect Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Connect Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -36867,7 +35916,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Connect Plus',
-        description: 'Posts hardware and software asset data from Patch Connect Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Connect Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Connect Plus agent.</p>
@@ -36907,7 +35955,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Connect Plus',
-        description: 'When a device is removed from Patch Connect Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Connect Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -36943,7 +35990,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -36982,7 +36028,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Connect Plus',
-        description: 'Posts hardware and software asset data from Patch Connect Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Connect Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Connect Plus agent.</p>
@@ -37022,7 +36067,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Connect Plus',
-        description: 'When a device is removed from Patch Connect Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Connect Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -37058,7 +36102,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Connect Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -37097,7 +36140,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Patch Connect Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -37138,7 +36180,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Patch Connect Plus',
-        description: 'Posts software metering (usage) data from Patch Connect Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Patch Connect Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -37176,7 +36217,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Patch Connect Plus',
-        description: 'Forwards action log/audit data from Patch Connect Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Connect Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Patch Connect Plus.</p>
@@ -37216,7 +36256,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Patch Connect Plus',
-        description: 'Forwards action log/audit data from Patch Connect Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Connect Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Patch Connect Plus.</p>
@@ -37256,7 +36295,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Patch Connect Plus',
-        description: 'Syncs vulnerability scan data from Patch Connect Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Patch Connect Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -37293,7 +36331,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Patch Connect Plus',
-        description: 'Syncs vulnerability scan data from Patch Connect Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Patch Connect Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -37330,7 +36367,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Patch Connect Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -37371,7 +36407,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -37409,7 +36444,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -37451,7 +36485,6 @@ const FEATURE_DETAILS = {
     },
     'pcp-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -37490,7 +36523,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Patch Manager Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Patch Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -37534,7 +36566,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ae-deploy-software': {
         title: 'Deploy Software from AssetExplorer Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>AssetExplorer</strong> ticket without switching to the Patch Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -37575,7 +36606,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ae-iframe': {
         title: 'Load Patch Manager Plus iFrame in AssetExplorer',
-        description: 'Embed the Patch Manager Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Manager Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Patch Manager Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -37615,7 +36645,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Patch Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -37657,7 +36686,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Patch Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -37699,7 +36727,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ae-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -37741,7 +36768,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ae-ssp-beta': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets (Beta)',
-        description: 'Requests raised by end users via the Patch Manager Plus Self-Service Portal are created as AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Patch Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Technicians can then process the request through the standard AssetExplorer ticket workflow.</p>
@@ -37781,7 +36807,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ae-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -37820,7 +36845,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ae-trayicon-beta': {
         title: 'Trayicon Requests as AssetExplorer Tickets (Beta)',
-        description: 'End-user requests submitted via the Patch Manager Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -37859,7 +36883,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -37897,7 +36920,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -37935,7 +36957,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -37973,7 +36994,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -38009,7 +37029,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -38045,7 +37064,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -38081,7 +37099,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -38117,7 +37134,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ela-comparators': {
         title: 'ELA Comparators for Patch Manager Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Patch Manager Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Patch Manager Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -38153,7 +37169,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ela-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Patch Manager Plus',
-        description: 'Patch compliance data from Patch Manager Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Patch Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -38191,7 +37206,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-ela-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Patch Manager Plus',
-        description: 'Vulnerability and system misconfiguration data from Patch Manager Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Patch Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -38228,7 +37242,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Patch Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -38269,7 +37282,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -38307,7 +37319,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -38349,7 +37360,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -38388,7 +37398,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Patch Manager Plus',
-        description: 'Pulls asset inventory data from Patch Manager Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Patch Manager Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -38424,7 +37433,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-jira-iframe': {
         title: 'Load Patch Manager Plus iFrame in Jira',
-        description: 'Embed the Patch Manager Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Manager Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Patch Manager Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -38464,7 +37472,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -38506,7 +37513,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -38545,7 +37551,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Patch Manager Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Patch Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -38589,7 +37594,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -38628,7 +37632,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Patch Manager Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Patch Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -38665,7 +37668,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Patch Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -38707,7 +37709,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-asset-removal': {
         title: 'Asset Removal Action – Patch Manager Plus → AssetExplorer',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Patch Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -38751,7 +37752,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -38790,7 +37790,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-deploy-packages': {
         title: 'Deploy Software Packages from AssetExplorer Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Patch Manager Plus) to managed endpoints directly from within <strong>AssetExplorer</strong> tickets. This streamlines software provisioning without requiring access to the Patch Manager Plus console.</p>
@@ -38827,7 +37826,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-deploy-templates': {
         title: 'Deploy Configuration Templates from AssetExplorer Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>AssetExplorer</strong> to managed endpoints. Templates are created in Patch Manager Plus and made available through the integration.</p>
@@ -38864,7 +37862,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-iframe': {
         title: 'Load Patch Manager Plus iFrame in AssetExplorer',
-        description: 'Embed the Patch Manager Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Manager Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Patch Manager Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -38904,7 +37901,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Patch Manager Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Patch Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -38941,7 +37937,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Patch Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -38983,7 +37978,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-prohibited-software': {
         title: 'Prohibited Software Alerts as AssetExplorer Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When the Patch Manager Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>AssetExplorer</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -39020,7 +38014,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -39062,7 +38055,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets',
-        description: 'Requests raised by end users via the Patch Manager Plus Self-Service Portal are created as AssetExplorer tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Patch Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Upon approval of the ticket in AssetExplorer, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -39102,7 +38094,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -39141,7 +38132,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-op-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Patch Manager Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -39180,7 +38170,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-software-removal': {
         title: 'Software Removal Sync – Patch Manager Plus → AssetExplorer',
-        description: 'When commercial software is removed from Patch Manager Plus, the corresponding software entry is updated in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Patch Manager Plus's software catalog, this feature automatically updates the corresponding software record in <strong>AssetExplorer</strong>. This keeps the asset management software inventory accurate.</p>
@@ -39214,7 +38203,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ae-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Patch Manager Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -39253,7 +38241,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -39291,7 +38278,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -39329,7 +38315,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -39367,7 +38352,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-op-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -39405,7 +38389,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-op-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -39443,7 +38426,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-op-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -39481,7 +38463,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-op-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -39517,7 +38498,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-op-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -39553,7 +38533,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-op-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -39589,7 +38568,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-op-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -39625,7 +38603,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -39661,7 +38638,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -39697,7 +38673,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -39733,7 +38708,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Patch Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Patch Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Patch Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -39769,7 +38743,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ela-op-audit-logs': {
         title: 'Audit Log Sync to EventLog Analyzer – Patch Manager Plus',
-        description: 'Forwards audit log data from Patch Manager Plus to EventLog Analyzer for log management and compliance.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Manager Plus</strong> to <strong>EventLog Analyzer (ELA)</strong>. ELA processes these logs for compliance reporting, security analysis, and real-time alerting on administrative actions.</p>
@@ -39806,7 +38779,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ela-op-comparators': {
         title: 'ELA Comparators for Patch Manager Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Patch Manager Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Patch Manager Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -39842,7 +38814,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ela-op-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Patch Manager Plus',
-        description: 'Patch compliance data from Patch Manager Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Patch Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -39880,7 +38851,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-ela-op-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Patch Manager Plus',
-        description: 'Vulnerability and system misconfiguration data from Patch Manager Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Patch Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -39917,7 +38887,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Patch Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -39958,7 +38927,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -39996,7 +38964,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -40038,7 +39005,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -40077,7 +39043,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Patch Manager Plus',
-        description: 'Pulls asset inventory data from Patch Manager Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Patch Manager Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -40113,7 +39078,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-jira-iframe': {
         title: 'Load Patch Manager Plus iFrame in Jira',
-        description: 'Embed the Patch Manager Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Manager Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Patch Manager Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -40153,7 +39117,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-jira-op-asset-data': {
         title: 'Asset Data Sync to Jira – Patch Manager Plus',
-        description: 'Pulls asset inventory data from Patch Manager Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Patch Manager Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -40189,7 +39152,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-jira-op-iframe': {
         title: 'Load Patch Manager Plus iFrame in Jira',
-        description: 'Embed the Patch Manager Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Manager Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Patch Manager Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -40229,7 +39191,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-jira-op-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -40271,7 +39232,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-jira-op-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -40310,7 +39270,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -40352,7 +39311,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -40391,7 +39349,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -40429,7 +39386,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -40467,7 +39423,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -40505,7 +39460,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -40543,7 +39497,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -40581,7 +39534,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -40619,7 +39571,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-qradar-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Patch Manager Plus',
-        description: 'Forwards action log/audit data from Patch Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -40658,7 +39609,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-qradar-op-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Patch Manager Plus',
-        description: 'Forwards action log/audit data from Patch Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -40697,7 +39647,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Patch Manager Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Patch Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -40741,7 +39690,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -40780,7 +39728,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Patch Manager Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Patch Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -40817,7 +39764,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Patch Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -40859,7 +39805,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-asset-removal': {
         title: 'Asset Removal Action – Patch Manager Plus → ServiceDesk Plus',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Patch Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -40903,7 +39848,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -40942,7 +39886,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-deploy-packages': {
         title: 'Deploy Software Packages from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Patch Manager Plus) to managed endpoints directly from within <strong>ServiceDesk Plus</strong> tickets. This streamlines software provisioning without requiring access to the Patch Manager Plus console.</p>
@@ -40979,7 +39922,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-deploy-templates': {
         title: 'Deploy Configuration Templates from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>ServiceDesk Plus</strong> to managed endpoints. Templates are created in Patch Manager Plus and made available through the integration.</p>
@@ -41016,7 +39958,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-iframe': {
         title: 'Load Patch Manager Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Patch Manager Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Manager Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Patch Manager Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -41056,7 +39997,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Patch Manager Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Patch Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -41093,7 +40033,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Patch Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -41135,7 +40074,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-prohibited-software': {
         title: 'Prohibited Software Alerts as ServiceDesk Plus Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When the Patch Manager Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>ServiceDesk Plus</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -41172,7 +40110,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -41214,7 +40151,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets',
-        description: 'Requests raised by end users via the Patch Manager Plus Self-Service Portal are created as ServiceDesk Plus tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Patch Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Upon approval of the ticket in ServiceDesk Plus, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -41254,7 +40190,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -41293,7 +40228,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-op-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Patch Manager Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -41332,7 +40266,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-software-removal': {
         title: 'Software Removal Sync – Patch Manager Plus → ServiceDesk Plus',
-        description: 'When commercial software is removed from Patch Manager Plus, the corresponding software entry is updated in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Patch Manager Plus's software catalog, this feature automatically updates the corresponding software record in <strong>ServiceDesk Plus</strong>. This keeps the asset management software inventory accurate.</p>
@@ -41366,7 +40299,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-sdp-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Patch Manager Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -41405,7 +40337,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Manager Plus',
-        description: 'Posts hardware and software asset data from Patch Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Manager Plus agent.</p>
@@ -41445,7 +40376,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Manager Plus',
-        description: 'When a device is removed from Patch Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -41481,7 +40411,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-basic-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Manager Plus',
-        description: 'Posts hardware and software asset data from Patch Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Manager Plus agent.</p>
@@ -41521,7 +40450,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-basic-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Manager Plus',
-        description: 'When a device is removed from Patch Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -41557,7 +40485,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-basic-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -41596,7 +40523,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -41635,7 +40561,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Manager Plus',
-        description: 'Posts hardware and software asset data from Patch Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Manager Plus agent.</p>
@@ -41675,7 +40600,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Manager Plus',
-        description: 'When a device is removed from Patch Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -41711,7 +40635,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Manager Plus',
-        description: 'Posts hardware and software asset data from Patch Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Manager Plus agent.</p>
@@ -41751,7 +40674,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Manager Plus',
-        description: 'When a device is removed from Patch Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -41787,7 +40709,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -41826,7 +40747,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-op-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Patch Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -41867,7 +40787,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-op-software-metering': {
         title: 'Software Metering Data to ServiceNow – Patch Manager Plus',
-        description: 'Posts software metering (usage) data from Patch Manager Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Patch Manager Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -41905,7 +40824,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -41944,7 +40862,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Patch Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -41985,7 +40902,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Patch Manager Plus',
-        description: 'Posts software metering (usage) data from Patch Manager Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Patch Manager Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -42023,7 +40939,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Patch Manager Plus',
-        description: 'Forwards action log/audit data from Patch Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Patch Manager Plus.</p>
@@ -42063,7 +40978,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Patch Manager Plus',
-        description: 'Forwards action log/audit data from Patch Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Patch Manager Plus.</p>
@@ -42103,7 +41017,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Patch Manager Plus',
-        description: 'Syncs vulnerability scan data from Patch Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Patch Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -42140,7 +41053,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Patch Manager Plus',
-        description: 'Syncs vulnerability scan data from Patch Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Patch Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -42177,7 +41089,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-syslog-cloud-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Patch Manager Plus',
-        description: 'Forwards action log/audit data from Patch Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -42216,7 +41127,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-syslog-op-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Patch Manager Plus',
-        description: 'Forwards action log/audit data from Patch Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Patch Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -42255,7 +41165,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Patch Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -42296,7 +41205,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -42334,7 +41242,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -42376,7 +41283,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-op-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -42415,7 +41321,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -42453,7 +41358,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -42491,7 +41395,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -42529,7 +41432,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -42567,7 +41469,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -42605,7 +41506,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Patch Manager Plus',
-        description: 'Automatically syncs default data categories from Patch Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Patch Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -42643,7 +41543,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-qradar-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Patch Manager Plus',
-        description: 'Forwards audit log data from Patch Manager Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Manager Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Patch Manager Plus.</p>
@@ -42675,7 +41574,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-qradar-op-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Patch Manager Plus',
-        description: 'Forwards audit log data from Patch Manager Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Manager Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Patch Manager Plus.</p>
@@ -42707,7 +41605,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Patch Manager Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Patch Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Patch Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -42751,7 +41648,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-sdp-deploy-software': {
         title: 'Deploy Software from ServiceDesk Plus Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceDesk Plus</strong> ticket without switching to the Patch Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -42792,7 +41688,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-sdp-iframe': {
         title: 'Load Patch Manager Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Patch Manager Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Patch Manager Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Patch Manager Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -42832,7 +41727,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Patch Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -42874,7 +41768,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Patch Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Patch Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Patch Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -42916,7 +41809,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-sdp-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -42958,7 +41850,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-sdp-ssp-beta': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'Requests raised by end users via the Patch Manager Plus Self-Service Portal are created as ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Patch Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Technicians can then process the request through the standard ServiceDesk Plus ticket workflow.</p>
@@ -42998,7 +41889,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-sdp-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -43037,7 +41927,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-sdp-trayicon-beta': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'End-user requests submitted via the Patch Manager Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Patch Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -43076,7 +41965,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Manager Plus',
-        description: 'Posts hardware and software asset data from Patch Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Manager Plus agent.</p>
@@ -43116,7 +42004,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Manager Plus',
-        description: 'When a device is removed from Patch Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -43152,7 +42039,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -43191,7 +42077,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Patch Manager Plus',
-        description: 'Posts hardware and software asset data from Patch Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Patch Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Patch Manager Plus agent.</p>
@@ -43231,7 +42116,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Patch Manager Plus',
-        description: 'When a device is removed from Patch Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Patch Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -43267,7 +42151,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Patch Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -43306,7 +42189,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Patch Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -43347,7 +42229,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Patch Manager Plus',
-        description: 'Posts software metering (usage) data from Patch Manager Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Patch Manager Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -43385,7 +42266,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Patch Manager Plus',
-        description: 'Forwards action log/audit data from Patch Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Patch Manager Plus.</p>
@@ -43425,7 +42305,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Patch Manager Plus',
-        description: 'Forwards action log/audit data from Patch Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Patch Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Patch Manager Plus.</p>
@@ -43465,7 +42344,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Patch Manager Plus',
-        description: 'Syncs vulnerability scan data from Patch Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Patch Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -43502,7 +42380,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Patch Manager Plus',
-        description: 'Syncs vulnerability scan data from Patch Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Patch Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -43539,7 +42416,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Patch Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -43580,7 +42456,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -43618,7 +42493,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -43660,7 +42534,6 @@ const FEATURE_DETAILS = {
     },
     'pmp-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -43699,7 +42572,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Remote Access Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Remote Access Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Remote Access Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -43743,7 +42615,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ae-deploy-software': {
         title: 'Deploy Software from AssetExplorer Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>AssetExplorer</strong> ticket without switching to the Remote Access Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -43784,7 +42655,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ae-iframe': {
         title: 'Load Remote Access Plus iFrame in AssetExplorer',
-        description: 'Embed the Remote Access Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Remote Access Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Remote Access Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -43824,7 +42694,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Remote Access Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Remote Access Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Remote Access Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -43866,7 +42735,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Remote Access Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Remote Access Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Remote Access Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -43908,7 +42776,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ae-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -43950,7 +42817,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ae-ssp-beta': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets (Beta)',
-        description: 'Requests raised by end users via the Remote Access Plus Self-Service Portal are created as AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Remote Access Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Technicians can then process the request through the standard AssetExplorer ticket workflow.</p>
@@ -43990,7 +42856,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ae-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -44029,7 +42894,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ae-trayicon-beta': {
         title: 'Trayicon Requests as AssetExplorer Tickets (Beta)',
-        description: 'End-user requests submitted via the Remote Access Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Remote Access Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -44068,7 +42932,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -44106,7 +42969,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -44144,7 +43006,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -44182,7 +43043,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -44218,7 +43078,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -44254,7 +43113,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -44290,7 +43148,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -44326,7 +43183,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ela-comparators': {
         title: 'ELA Comparators for Remote Access Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Remote Access Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Remote Access Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -44362,7 +43218,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ela-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Remote Access Plus',
-        description: 'Patch compliance data from Remote Access Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Remote Access Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -44400,7 +43255,6 @@ const FEATURE_DETAILS = {
     },
     'rap-ela-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Remote Access Plus',
-        description: 'Vulnerability and system misconfiguration data from Remote Access Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Remote Access Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -44437,7 +43291,6 @@ const FEATURE_DETAILS = {
     },
     'rap-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Remote Access Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -44478,7 +43331,6 @@ const FEATURE_DETAILS = {
     },
     'rap-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -44516,7 +43368,6 @@ const FEATURE_DETAILS = {
     },
     'rap-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -44558,7 +43409,6 @@ const FEATURE_DETAILS = {
     },
     'rap-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -44597,7 +43447,6 @@ const FEATURE_DETAILS = {
     },
     'rap-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Remote Access Plus',
-        description: 'Pulls asset inventory data from Remote Access Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Remote Access Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -44633,7 +43482,6 @@ const FEATURE_DETAILS = {
     },
     'rap-jira-iframe': {
         title: 'Load Remote Access Plus iFrame in Jira',
-        description: 'Embed the Remote Access Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Remote Access Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Remote Access Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -44673,7 +43521,6 @@ const FEATURE_DETAILS = {
     },
     'rap-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -44715,7 +43562,6 @@ const FEATURE_DETAILS = {
     },
     'rap-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -44754,7 +43600,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Remote Access Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Remote Access Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Remote Access Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -44798,7 +43643,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -44837,7 +43681,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Remote Access Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Remote Access Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -44874,7 +43717,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Remote Access Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Remote Access Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Remote Access Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -44916,7 +43758,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-asset-removal': {
         title: 'Asset Removal Action – Remote Access Plus → AssetExplorer',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Remote Access Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Remote Access Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -44960,7 +43801,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -44999,7 +43839,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-deploy-packages': {
         title: 'Deploy Software Packages from AssetExplorer Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Remote Access Plus) to managed endpoints directly from within <strong>AssetExplorer</strong> tickets. This streamlines software provisioning without requiring access to the Remote Access Plus console.</p>
@@ -45036,7 +43875,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-deploy-templates': {
         title: 'Deploy Configuration Templates from AssetExplorer Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>AssetExplorer</strong> to managed endpoints. Templates are created in Remote Access Plus and made available through the integration.</p>
@@ -45073,7 +43911,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-iframe': {
         title: 'Load Remote Access Plus iFrame in AssetExplorer',
-        description: 'Embed the Remote Access Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Remote Access Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Remote Access Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -45113,7 +43950,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Remote Access Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Remote Access Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -45150,7 +43986,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Remote Access Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Remote Access Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Remote Access Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -45192,7 +44027,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-prohibited-software': {
         title: 'Prohibited Software Alerts as AssetExplorer Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When the Remote Access Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>AssetExplorer</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -45229,7 +44063,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -45271,7 +44104,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets',
-        description: 'Requests raised by end users via the Remote Access Plus Self-Service Portal are created as AssetExplorer tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Remote Access Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Upon approval of the ticket in AssetExplorer, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -45311,7 +44143,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -45350,7 +44181,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-op-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Remote Access Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Remote Access Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -45389,7 +44219,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-software-removal': {
         title: 'Software Removal Sync – Remote Access Plus → AssetExplorer',
-        description: 'When commercial software is removed from Remote Access Plus, the corresponding software entry is updated in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Remote Access Plus's software catalog, this feature automatically updates the corresponding software record in <strong>AssetExplorer</strong>. This keeps the asset management software inventory accurate.</p>
@@ -45423,7 +44252,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ae-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Remote Access Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Remote Access Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -45462,7 +44290,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -45500,7 +44327,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -45538,7 +44364,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -45576,7 +44401,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-op-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -45614,7 +44438,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-op-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -45652,7 +44475,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-op-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -45690,7 +44512,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-op-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -45726,7 +44547,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-op-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -45762,7 +44582,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-op-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -45798,7 +44617,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-op-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -45834,7 +44652,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -45870,7 +44687,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -45906,7 +44722,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -45942,7 +44757,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Remote Access Plus',
-        description: 'Enables additional optional data categories to be synced from Remote Access Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Remote Access Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -45978,7 +44792,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ela-op-audit-logs': {
         title: 'Audit Log Sync to EventLog Analyzer – Remote Access Plus',
-        description: 'Forwards audit log data from Remote Access Plus to EventLog Analyzer for log management and compliance.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer data (audit logs)</strong> from <strong>Remote Access Plus</strong> to <strong>EventLog Analyzer (ELA)</strong>. ELA processes these logs for compliance reporting, security analysis, and real-time alerting on administrative actions.</p>
@@ -46015,7 +44828,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ela-op-comparators': {
         title: 'ELA Comparators for Remote Access Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Remote Access Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Remote Access Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -46051,7 +44863,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ela-op-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Remote Access Plus',
-        description: 'Patch compliance data from Remote Access Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Remote Access Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -46089,7 +44900,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-ela-op-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Remote Access Plus',
-        description: 'Vulnerability and system misconfiguration data from Remote Access Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Remote Access Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -46126,7 +44936,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Remote Access Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -46167,7 +44976,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -46205,7 +45013,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -46247,7 +45054,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -46286,7 +45092,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Remote Access Plus',
-        description: 'Pulls asset inventory data from Remote Access Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Remote Access Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -46322,7 +45127,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-jira-iframe': {
         title: 'Load Remote Access Plus iFrame in Jira',
-        description: 'Embed the Remote Access Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Remote Access Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Remote Access Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -46362,7 +45166,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-jira-op-asset-data': {
         title: 'Asset Data Sync to Jira – Remote Access Plus',
-        description: 'Pulls asset inventory data from Remote Access Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Remote Access Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -46398,7 +45201,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-jira-op-iframe': {
         title: 'Load Remote Access Plus iFrame in Jira',
-        description: 'Embed the Remote Access Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Remote Access Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Remote Access Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -46438,7 +45240,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-jira-op-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -46480,7 +45281,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-jira-op-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -46519,7 +45319,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -46561,7 +45360,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -46600,7 +45398,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -46638,7 +45435,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -46676,7 +45472,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -46714,7 +45509,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -46752,7 +45546,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -46790,7 +45583,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -46828,7 +45620,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-qradar-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Remote Access Plus',
-        description: 'Forwards action log/audit data from Remote Access Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Remote Access Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -46867,7 +45658,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-qradar-op-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Remote Access Plus',
-        description: 'Forwards action log/audit data from Remote Access Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Remote Access Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -46906,7 +45696,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Remote Access Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Remote Access Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Remote Access Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -46950,7 +45739,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -46989,7 +45777,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Remote Access Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Remote Access Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -47026,7 +45813,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Remote Access Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Remote Access Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Remote Access Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -47068,7 +45854,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-asset-removal': {
         title: 'Asset Removal Action – Remote Access Plus → ServiceDesk Plus',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Remote Access Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Remote Access Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -47112,7 +45897,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -47151,7 +45935,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-deploy-packages': {
         title: 'Deploy Software Packages from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy custom software packages (created in Remote Access Plus) to managed endpoints directly from within <strong>ServiceDesk Plus</strong> tickets. This streamlines software provisioning without requiring access to the Remote Access Plus console.</p>
@@ -47188,7 +45971,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-deploy-templates': {
         title: 'Deploy Configuration Templates from ServiceDesk Plus Tickets',
-        description: 'Deploy user-defined configuration templates to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to push pre-defined <strong>configuration templates</strong> (e.g., wallpaper, browser settings, power settings, shortcuts) from <strong>ServiceDesk Plus</strong> to managed endpoints. Templates are created in Remote Access Plus and made available through the integration.</p>
@@ -47225,7 +46007,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-iframe': {
         title: 'Load Remote Access Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Remote Access Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Remote Access Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Remote Access Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -47265,7 +46046,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Remote Access Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Remote Access Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -47302,7 +46082,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Remote Access Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Remote Access Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Remote Access Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -47344,7 +46123,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-prohibited-software': {
         title: 'Prohibited Software Alerts as ServiceDesk Plus Tickets',
-        description: 'When prohibited software is detected on an endpoint, a ticket is automatically created in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When the Remote Access Plus agent detects software marked as <strong>prohibited</strong> on a managed endpoint, a ticket is automatically generated in <strong>ServiceDesk Plus</strong>. This helps enforce the organization's software compliance policy by routing violations directly to the helpdesk for action.</p>
@@ -47381,7 +46159,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -47423,7 +46200,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-ssp-auto-install': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets',
-        description: 'Requests raised by end users via the Remote Access Plus Self-Service Portal are created as ServiceDesk Plus tickets and software is auto-installed upon approval.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Remote Access Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Upon approval of the ticket in ServiceDesk Plus, the requested software is <strong>automatically installed</strong> on the user's machine without technician intervention.</p>
@@ -47463,7 +46239,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -47502,7 +46277,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-op-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Remote Access Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Remote Access Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -47541,7 +46315,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-software-removal': {
         title: 'Software Removal Sync – Remote Access Plus → ServiceDesk Plus',
-        description: 'When commercial software is removed from Remote Access Plus, the corresponding software entry is updated in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Remote Access Plus's software catalog, this feature automatically updates the corresponding software record in <strong>ServiceDesk Plus</strong>. This keeps the asset management software inventory accurate.</p>
@@ -47575,7 +46348,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-sdp-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Remote Access Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Remote Access Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -47614,7 +46386,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Remote Access Plus',
-        description: 'Posts hardware and software asset data from Remote Access Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Remote Access Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Remote Access Plus agent.</p>
@@ -47654,7 +46425,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Remote Access Plus',
-        description: 'When a device is removed from Remote Access Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Remote Access Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -47690,7 +46460,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-basic-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Remote Access Plus',
-        description: 'When a device is removed from Remote Access Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Remote Access Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -47726,7 +46495,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-basic-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -47765,7 +46533,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-basic-op-remote-control': {
         title: 'Remote Control from ServiceNow Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceNow ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceNow</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -47807,7 +46574,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -47846,7 +46612,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Remote Access Plus',
-        description: 'When a device is removed from Remote Access Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Remote Access Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -47882,7 +46647,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Remote Access Plus',
-        description: 'When a device is removed from Remote Access Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Remote Access Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -47918,7 +46682,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -47957,7 +46720,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-op-remote-control': {
         title: 'Remote Control from ServiceNow Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceNow ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceNow</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -47999,7 +46761,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-op-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Remote Access Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -48040,7 +46801,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-op-software-metering': {
         title: 'Software Metering Data to ServiceNow – Remote Access Plus',
-        description: 'Posts software metering (usage) data from Remote Access Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Remote Access Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -48078,7 +46838,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -48117,7 +46876,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-remote-control': {
         title: 'Remote Control from ServiceNow Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceNow ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceNow</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -48159,7 +46917,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Remote Access Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -48200,7 +46957,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Remote Access Plus',
-        description: 'Posts software metering (usage) data from Remote Access Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Remote Access Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -48238,7 +46994,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Remote Access Plus',
-        description: 'Forwards action log/audit data from Remote Access Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Remote Access Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Remote Access Plus.</p>
@@ -48278,7 +47033,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Remote Access Plus',
-        description: 'Syncs vulnerability scan data from Remote Access Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Remote Access Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -48315,7 +47069,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Remote Access Plus',
-        description: 'Syncs vulnerability scan data from Remote Access Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Remote Access Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -48352,7 +47105,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-syslog-cloud-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Remote Access Plus',
-        description: 'Forwards action log/audit data from Remote Access Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Remote Access Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -48391,7 +47143,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-syslog-op-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Remote Access Plus',
-        description: 'Forwards action log/audit data from Remote Access Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Remote Access Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -48430,7 +47181,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Remote Access Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -48471,7 +47221,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -48509,7 +47258,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -48551,7 +47299,6 @@ const FEATURE_DETAILS = {
     },
     'rap-op-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -48590,7 +47337,6 @@ const FEATURE_DETAILS = {
     },
     'rap-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -48628,7 +47374,6 @@ const FEATURE_DETAILS = {
     },
     'rap-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -48666,7 +47411,6 @@ const FEATURE_DETAILS = {
     },
     'rap-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -48704,7 +47448,6 @@ const FEATURE_DETAILS = {
     },
     'rap-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -48742,7 +47485,6 @@ const FEATURE_DETAILS = {
     },
     'rap-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -48780,7 +47522,6 @@ const FEATURE_DETAILS = {
     },
     'rap-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Remote Access Plus',
-        description: 'Automatically syncs default data categories from Remote Access Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Remote Access Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -48818,7 +47559,6 @@ const FEATURE_DETAILS = {
     },
     'rap-qradar-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Remote Access Plus',
-        description: 'Forwards audit log data from Remote Access Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Remote Access Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Remote Access Plus.</p>
@@ -48850,7 +47590,6 @@ const FEATURE_DETAILS = {
     },
     'rap-qradar-op-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Remote Access Plus',
-        description: 'Forwards audit log data from Remote Access Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Remote Access Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Remote Access Plus.</p>
@@ -48882,7 +47621,6 @@ const FEATURE_DETAILS = {
     },
     'rap-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Remote Access Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Remote Access Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Remote Access Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -48926,7 +47664,6 @@ const FEATURE_DETAILS = {
     },
     'rap-sdp-deploy-software': {
         title: 'Deploy Software from ServiceDesk Plus Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceDesk Plus</strong> ticket without switching to the Remote Access Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -48967,7 +47704,6 @@ const FEATURE_DETAILS = {
     },
     'rap-sdp-iframe': {
         title: 'Load Remote Access Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Remote Access Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Remote Access Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Remote Access Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -49007,7 +47743,6 @@ const FEATURE_DETAILS = {
     },
     'rap-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Remote Access Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Remote Access Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Remote Access Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -49049,7 +47784,6 @@ const FEATURE_DETAILS = {
     },
     'rap-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Remote Access Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Remote Access Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Remote Access Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -49091,7 +47825,6 @@ const FEATURE_DETAILS = {
     },
     'rap-sdp-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -49133,7 +47866,6 @@ const FEATURE_DETAILS = {
     },
     'rap-sdp-ssp-beta': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'Requests raised by end users via the Remote Access Plus Self-Service Portal are created as ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Remote Access Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Technicians can then process the request through the standard ServiceDesk Plus ticket workflow.</p>
@@ -49173,7 +47905,6 @@ const FEATURE_DETAILS = {
     },
     'rap-sdp-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -49212,7 +47943,6 @@ const FEATURE_DETAILS = {
     },
     'rap-sdp-trayicon-beta': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'End-user requests submitted via the Remote Access Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Remote Access Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -49251,7 +47981,6 @@ const FEATURE_DETAILS = {
     },
     'rap-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Remote Access Plus',
-        description: 'Posts hardware and software asset data from Remote Access Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Remote Access Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Remote Access Plus agent.</p>
@@ -49291,7 +48020,6 @@ const FEATURE_DETAILS = {
     },
     'rap-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Remote Access Plus',
-        description: 'When a device is removed from Remote Access Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Remote Access Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -49327,7 +48055,6 @@ const FEATURE_DETAILS = {
     },
     'rap-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -49366,7 +48093,6 @@ const FEATURE_DETAILS = {
     },
     'rap-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Remote Access Plus',
-        description: 'When a device is removed from Remote Access Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Remote Access Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -49402,7 +48128,6 @@ const FEATURE_DETAILS = {
     },
     'rap-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Remote Access Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -49441,7 +48166,6 @@ const FEATURE_DETAILS = {
     },
     'rap-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Remote Access Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -49482,7 +48206,6 @@ const FEATURE_DETAILS = {
     },
     'rap-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Remote Access Plus',
-        description: 'Posts software metering (usage) data from Remote Access Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Remote Access Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -49520,7 +48243,6 @@ const FEATURE_DETAILS = {
     },
     'rap-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Remote Access Plus',
-        description: 'Forwards action log/audit data from Remote Access Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Remote Access Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Remote Access Plus.</p>
@@ -49560,7 +48282,6 @@ const FEATURE_DETAILS = {
     },
     'rap-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Remote Access Plus',
-        description: 'Forwards action log/audit data from Remote Access Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Remote Access Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Remote Access Plus.</p>
@@ -49600,7 +48321,6 @@ const FEATURE_DETAILS = {
     },
     'rap-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Remote Access Plus',
-        description: 'Syncs vulnerability scan data from Remote Access Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Remote Access Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -49637,7 +48357,6 @@ const FEATURE_DETAILS = {
     },
     'rap-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Remote Access Plus',
-        description: 'Syncs vulnerability scan data from Remote Access Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Remote Access Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -49674,7 +48393,6 @@ const FEATURE_DETAILS = {
     },
     'rap-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Remote Access Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -49715,7 +48433,6 @@ const FEATURE_DETAILS = {
     },
     'rap-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -49753,7 +48470,6 @@ const FEATURE_DETAILS = {
     },
     'rap-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -49795,7 +48511,6 @@ const FEATURE_DETAILS = {
     },
     'rap-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -49834,7 +48549,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Vulnerability Manager Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Vulnerability Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Vulnerability Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -49878,7 +48592,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ae-deploy-software': {
         title: 'Deploy Software from AssetExplorer Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>AssetExplorer</strong> ticket without switching to the Vulnerability Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -49919,7 +48632,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ae-iframe': {
         title: 'Load Vulnerability Manager Plus iFrame in AssetExplorer',
-        description: 'Embed the Vulnerability Manager Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Vulnerability Manager Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Vulnerability Manager Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -49959,7 +48671,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Vulnerability Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Vulnerability Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Vulnerability Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -50001,7 +48712,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Vulnerability Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Vulnerability Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Vulnerability Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -50043,7 +48753,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ae-remote-control': {
         title: 'Remote Control from AssetExplorer Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a AssetExplorer ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>AssetExplorer</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -50085,7 +48794,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ae-ssp-beta': {
         title: 'Self-Service Portal Requests as AssetExplorer Tickets (Beta)',
-        description: 'Requests raised by end users via the Vulnerability Manager Plus Self-Service Portal are created as AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Vulnerability Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>AssetExplorer</strong> as tickets. Technicians can then process the request through the standard AssetExplorer ticket workflow.</p>
@@ -50125,7 +48833,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ae-tools-action': {
         title: 'Perform Tools Action from AssetExplorer Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from AssetExplorer tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>AssetExplorer</strong> tickets.</p>
@@ -50164,7 +48871,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ae-trayicon-beta': {
         title: 'Trayicon Requests as AssetExplorer Tickets (Beta)',
-        description: 'End-user requests submitted via the Vulnerability Manager Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Vulnerability Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -50203,7 +48909,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -50241,7 +48946,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -50279,7 +48983,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -50317,7 +49020,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -50353,7 +49055,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -50389,7 +49090,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -50425,7 +49125,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -50461,7 +49160,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ela-comparators': {
         title: 'ELA Comparators for Vulnerability Manager Plus',
-        description: 'Create comparators in EventLog Analyzer to build custom correlation rules and alert profiles using Vulnerability Manager Plus data.',
         content: `
             <h3>Description</h3>
             <p><strong>Comparators</strong> in EventLog Analyzer allow you to define conditions that compare incoming data (from Vulnerability Manager Plus) against predefined criteria. These comparators are used as building blocks for <strong>custom correlation rules</strong> and <strong>alert profiles</strong>, enabling powerful security monitoring tailored to your environment.</p>
@@ -50497,7 +49195,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ela-patch-data': {
         title: 'Patch Data Sync to EventLog Analyzer – Vulnerability Manager Plus',
-        description: 'Patch compliance data from Vulnerability Manager Plus is pulled into EventLog Analyzer for incident workflows and alerting.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>patch compliance data</strong> from <strong>Vulnerability Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create incident workflows, custom alerts, and correlation rules based on missing patches, failed deployments, and patch approval status.</p>
@@ -50535,7 +49232,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-ela-vulnerability-data': {
         title: 'Vulnerability Data Sync to EventLog Analyzer – Vulnerability Manager Plus',
-        description: 'Vulnerability and system misconfiguration data from Vulnerability Manager Plus is pulled into ELA for custom correlation rules and alerts.',
         content: `
             <h3>Description</h3>
             <p>This feature pulls <strong>vulnerability and system misconfiguration data</strong> from <strong>Vulnerability Manager Plus</strong> into <strong>EventLog Analyzer (ELA)</strong>. Security teams can create custom correlation rules and alert profiles to identify devices with critical vulnerabilities or misconfigurations.</p>
@@ -50572,7 +49268,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Vulnerability Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -50613,7 +49308,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -50651,7 +49345,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -50693,7 +49386,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -50732,7 +49424,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Vulnerability Manager Plus',
-        description: 'Pulls asset inventory data from Vulnerability Manager Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Vulnerability Manager Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -50768,7 +49459,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-jira-iframe': {
         title: 'Load Vulnerability Manager Plus iFrame in Jira',
-        description: 'Embed the Vulnerability Manager Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Vulnerability Manager Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Vulnerability Manager Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -50808,7 +49498,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -50850,7 +49539,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -50889,7 +49577,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ae-asset-removal-beta': {
         title: 'Asset Removal Action – Vulnerability Manager Plus → AssetExplorer (Beta)',
-        description: 'Automatically perform actions on the AssetExplorer asset record when the device is removed from Vulnerability Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Vulnerability Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>AssetExplorer</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -50933,7 +49620,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ae-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Vulnerability Manager Plus agent to the corresponding asset in <strong>AssetExplorer</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -50972,7 +49658,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ae-inventory-alerts': {
         title: 'Inventory Alerts as AssetExplorer Tickets',
-        description: 'Inventory alerts from Vulnerability Manager Plus are automatically created as tickets in AssetExplorer for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Vulnerability Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>AssetExplorer</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -51009,7 +49694,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ae-inventory-sync': {
         title: 'Inventory Asset Sync – Vulnerability Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Vulnerability Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Vulnerability Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -51051,7 +49735,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ae-op-iframe': {
         title: 'Load Vulnerability Manager Plus iFrame in AssetExplorer',
-        description: 'Embed the Vulnerability Manager Plus console inside AssetExplorer for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Vulnerability Manager Plus</strong> web console inside <strong>AssetExplorer</strong> as an iFrame. Technicians can access Vulnerability Manager Plus features without leaving the AssetExplorer interface, reducing context-switching and improving productivity.</p>
@@ -51091,7 +49774,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ae-op-inventory-sync': {
         title: 'Inventory Asset Sync – Vulnerability Manager Plus → AssetExplorer',
-        description: 'Synchronizes hardware and software inventory data from Vulnerability Manager Plus to AssetExplorer, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Vulnerability Manager Plus</strong> to <strong>AssetExplorer</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -51133,7 +49815,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ae-software-removal': {
         title: 'Software Removal Sync – Vulnerability Manager Plus → AssetExplorer',
-        description: 'When commercial software is removed from Vulnerability Manager Plus, the corresponding software entry is updated in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Vulnerability Manager Plus's software catalog, this feature automatically updates the corresponding software record in <strong>AssetExplorer</strong>. This keeps the asset management software inventory accurate.</p>
@@ -51167,7 +49848,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ae-trayicon': {
         title: 'Trayicon Requests as AssetExplorer Tickets',
-        description: 'End-user requests submitted via the Vulnerability Manager Plus system tray icon are automatically created as tickets in AssetExplorer.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Vulnerability Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>AssetExplorer</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -51206,7 +49886,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -51244,7 +49923,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -51282,7 +49960,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -51320,7 +49997,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-op-default-sync-1': {
         title: 'Default Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -51358,7 +50034,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-op-default-sync-2': {
         title: 'Default Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -51396,7 +50071,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-op-default-sync-3': {
         title: 'Default Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Analytics Plus for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -51434,7 +50108,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-op-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -51470,7 +50143,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-op-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -51506,7 +50178,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-op-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -51542,7 +50213,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-op-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -51578,7 +50248,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-optional-sync-1': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -51614,7 +50283,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-optional-sync-2': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -51650,7 +50318,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-optional-sync-3': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -51686,7 +50353,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ap-optional-sync-4': {
         title: 'Optional Data Sync to Analytics Plus – Vulnerability Manager Plus',
-        description: 'Enables additional optional data categories to be synced from Vulnerability Manager Plus to Analytics Plus.',
         content: `
             <h3>Description</h3>
             <p>In addition to default data sync, this feature allows you to enable <strong>optional data categories</strong> for synchronization from <strong>Vulnerability Manager Plus</strong> to <strong>Analytics Plus</strong>:</p>
@@ -51722,7 +50388,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-ela-op-audit-logs': {
         title: 'Audit Log Sync to EventLog Analyzer – Vulnerability Manager Plus',
-        description: 'Forwards audit log data from Vulnerability Manager Plus to EventLog Analyzer for log management and compliance.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer data (audit logs)</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>EventLog Analyzer (ELA)</strong>. ELA processes these logs for compliance reporting, security analysis, and real-time alerting on administrative actions.</p>
@@ -51759,7 +50424,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-freshservice-deploy-software': {
         title: 'Deploy Software from FreshService Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>FreshService</strong> ticket without switching to the Vulnerability Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -51800,7 +50464,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-freshservice-power-options': {
         title: 'Remote Power Options from FreshService Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>FreshService</strong> tickets.</p>
@@ -51838,7 +50501,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-freshservice-remote-control': {
         title: 'Remote Control from FreshService Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a FreshService ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>FreshService</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -51880,7 +50542,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-freshservice-system-tools': {
         title: 'Perform Tools Action from FreshService Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from FreshService tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>FreshService</strong> tickets.</p>
@@ -51919,7 +50580,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-jira-asset-data': {
         title: 'Asset Data Sync to Jira – Vulnerability Manager Plus',
-        description: 'Pulls asset inventory data from Vulnerability Manager Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Vulnerability Manager Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -51955,7 +50615,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-jira-iframe': {
         title: 'Load Vulnerability Manager Plus iFrame in Jira',
-        description: 'Embed the Vulnerability Manager Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Vulnerability Manager Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Vulnerability Manager Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -51995,7 +50654,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-jira-op-asset-data': {
         title: 'Asset Data Sync to Jira – Vulnerability Manager Plus',
-        description: 'Pulls asset inventory data from Vulnerability Manager Plus into Jira for issue tracking and asset context.',
         content: `
             <h3>Description</h3>
             <p>This feature makes <strong>asset inventory data</strong> from <strong>Vulnerability Manager Plus</strong> available within <strong>Jira</strong>, allowing support teams to see device details (hardware, software, user) directly within Jira issues.</p>
@@ -52031,7 +50689,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-jira-op-iframe': {
         title: 'Load Vulnerability Manager Plus iFrame in Jira',
-        description: 'Embed the Vulnerability Manager Plus console inside Jira for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Vulnerability Manager Plus</strong> web console inside <strong>Jira</strong> as an iFrame. Technicians can access Vulnerability Manager Plus features without leaving the Jira interface, reducing context-switching and improving productivity.</p>
@@ -52071,7 +50728,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-jira-op-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -52113,7 +50769,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-jira-op-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -52152,7 +50807,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-jira-remote-control': {
         title: 'Remote Control from Jira Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Jira ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Jira</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -52194,7 +50848,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-jira-tools-action': {
         title: 'Perform Tools Action from Jira Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Jira tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Jira</strong> tickets.</p>
@@ -52233,7 +50886,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -52271,7 +50923,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -52309,7 +50960,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -52347,7 +50997,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -52385,7 +51034,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -52423,7 +51071,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -52461,7 +51108,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-qradar-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Vulnerability Manager Plus',
-        description: 'Forwards action log/audit data from Vulnerability Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Vulnerability Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -52500,7 +51146,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-qradar-op-audit-logs-syslog': {
         title: 'Audit Log Sync to Syslog/SIEM – Vulnerability Manager Plus',
-        description: 'Forwards action log/audit data from Vulnerability Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Vulnerability Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -52539,7 +51184,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Vulnerability Manager Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Vulnerability Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Vulnerability Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -52583,7 +51227,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-sdp-auto-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Vulnerability Manager Plus agent to the corresponding asset in <strong>ServiceDesk Plus</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -52622,7 +51265,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-sdp-inventory-alerts': {
         title: 'Inventory Alerts as ServiceDesk Plus Tickets',
-        description: 'Inventory alerts from Vulnerability Manager Plus are automatically created as tickets in ServiceDesk Plus for follow-up.',
         content: `
             <h3>Description</h3>
             <p>When Vulnerability Manager Plus detects an inventory change that triggers an alert (e.g., hardware modification, unauthorized software installation, low disk space), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This ensures inventory anomalies are tracked and resolved through the helpdesk workflow.</p>
@@ -52659,7 +51301,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Vulnerability Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Vulnerability Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -52701,7 +51342,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-sdp-op-iframe': {
         title: 'Load Vulnerability Manager Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Vulnerability Manager Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Vulnerability Manager Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Vulnerability Manager Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -52741,7 +51381,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Vulnerability Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Vulnerability Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -52783,7 +51422,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-sdp-software-removal': {
         title: 'Software Removal Sync – Vulnerability Manager Plus → ServiceDesk Plus',
-        description: 'When commercial software is removed from Vulnerability Manager Plus, the corresponding software entry is updated in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When <strong>commercial software</strong> is removed or uninstalled from Vulnerability Manager Plus's software catalog, this feature automatically updates the corresponding software record in <strong>ServiceDesk Plus</strong>. This keeps the asset management software inventory accurate.</p>
@@ -52817,7 +51455,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-sdp-trayicon': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets',
-        description: 'End-user requests submitted via the Vulnerability Manager Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Vulnerability Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -52856,7 +51493,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Vulnerability Manager Plus',
-        description: 'Posts hardware and software asset data from Vulnerability Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Vulnerability Manager Plus agent.</p>
@@ -52896,7 +51532,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Vulnerability Manager Plus',
-        description: 'When a device is removed from Vulnerability Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Vulnerability Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -52932,7 +51567,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-basic-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Vulnerability Manager Plus',
-        description: 'Posts hardware and software asset data from Vulnerability Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Vulnerability Manager Plus agent.</p>
@@ -52972,7 +51606,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-basic-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Vulnerability Manager Plus',
-        description: 'When a device is removed from Vulnerability Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Vulnerability Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -53008,7 +51641,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-basic-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Vulnerability Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -53047,7 +51679,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Vulnerability Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -53086,7 +51717,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Vulnerability Manager Plus',
-        description: 'Posts hardware and software asset data from Vulnerability Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Vulnerability Manager Plus agent.</p>
@@ -53126,7 +51756,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Vulnerability Manager Plus',
-        description: 'When a device is removed from Vulnerability Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Vulnerability Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -53162,7 +51791,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-op-asset-post': {
         title: 'Asset Data Post to ServiceNow – Vulnerability Manager Plus',
-        description: 'Posts hardware and software asset data from Vulnerability Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Vulnerability Manager Plus agent.</p>
@@ -53202,7 +51830,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-op-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Vulnerability Manager Plus',
-        description: 'When a device is removed from Vulnerability Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Vulnerability Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -53238,7 +51865,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-op-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Vulnerability Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -53277,7 +51903,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-op-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Vulnerability Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -53318,7 +51943,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-op-software-metering': {
         title: 'Software Metering Data to ServiceNow – Vulnerability Manager Plus',
-        description: 'Posts software metering (usage) data from Vulnerability Manager Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -53356,7 +51980,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Vulnerability Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -53395,7 +52018,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Vulnerability Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -53436,7 +52058,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Vulnerability Manager Plus',
-        description: 'Posts software metering (usage) data from Vulnerability Manager Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -53474,7 +52095,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Vulnerability Manager Plus',
-        description: 'Forwards action log/audit data from Vulnerability Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Vulnerability Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Vulnerability Manager Plus.</p>
@@ -53514,7 +52134,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Vulnerability Manager Plus',
-        description: 'Forwards action log/audit data from Vulnerability Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Vulnerability Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Vulnerability Manager Plus.</p>
@@ -53554,7 +52173,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Vulnerability Manager Plus',
-        description: 'Syncs vulnerability scan data from Vulnerability Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -53591,7 +52209,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Vulnerability Manager Plus',
-        description: 'Syncs vulnerability scan data from Vulnerability Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -53628,7 +52245,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-syslog-cloud-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Vulnerability Manager Plus',
-        description: 'Forwards action log/audit data from Vulnerability Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Vulnerability Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -53667,7 +52283,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-syslog-op-audit-logs': {
         title: 'Audit Log Sync to Syslog/SIEM – Vulnerability Manager Plus',
-        description: 'Forwards action log/audit data from Vulnerability Manager Plus to a Syslog server or SIEM solution.',
         content: `
             <h3>Description</h3>
             <p>This feature exports <strong>Action Log Viewer data (audit logs)</strong> from <strong>Vulnerability Manager Plus</strong> to a <strong>Syslog server or SIEM</strong> solution. This allows the security operations team to correlate endpoint management events with other security data sources in a centralized SIEM.</p>
@@ -53706,7 +52321,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Vulnerability Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -53747,7 +52361,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -53785,7 +52398,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -53827,7 +52439,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-op-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
@@ -53866,7 +52477,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-powerbi-default-sync-1': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -53904,7 +52514,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-powerbi-default-sync-2': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -53942,7 +52551,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-powerbi-default-sync-3': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -53980,7 +52588,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-powerbi-op-default-sync-1': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -54018,7 +52625,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-powerbi-op-default-sync-2': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -54056,7 +52662,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-powerbi-op-default-sync-3': {
         title: 'Default Data Sync to Power BI – Vulnerability Manager Plus',
-        description: 'Automatically syncs default data categories from Vulnerability Manager Plus to Power BI for reporting and analytics.',
         content: `
             <h3>Description</h3>
             <p>This feature enables <strong>default data synchronization</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Power BI</strong>. The following data categories are synced automatically once the integration is enabled:</p>
@@ -54094,7 +52699,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-qradar-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Vulnerability Manager Plus',
-        description: 'Forwards audit log data from Vulnerability Manager Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Vulnerability Manager Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Vulnerability Manager Plus.</p>
@@ -54126,7 +52730,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-qradar-op-audit-logs-rest': {
         title: 'Audit Log Sync to IBM QRadar (REST API) – Vulnerability Manager Plus',
-        description: 'Forwards audit log data from Vulnerability Manager Plus to IBM QRadar via REST API for SIEM correlation.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Vulnerability Manager Plus</strong> to <strong>IBM QRadar</strong> via <strong>REST API</strong>. QRadar can then apply its offense detection, correlation rules, and reporting to track administrative events from Vulnerability Manager Plus.</p>
@@ -54158,7 +52761,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-sdp-asset-removal-beta': {
         title: 'Asset Removal Action – Vulnerability Manager Plus → ServiceDesk Plus (Beta)',
-        description: 'Automatically perform actions on the ServiceDesk Plus asset record when the device is removed from Vulnerability Manager Plus Scope of Management.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the Scope of Management (SoM) in <strong>Vulnerability Manager Plus</strong>, this feature automatically updates or removes the corresponding asset record in <strong>ServiceDesk Plus</strong>. This keeps asset records in sync and prevents stale entries in the helpdesk/CMDB.</p>
@@ -54202,7 +52804,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-sdp-deploy-software': {
         title: 'Deploy Software from ServiceDesk Plus Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceDesk Plus</strong> ticket without switching to the Vulnerability Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -54243,7 +52844,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-sdp-iframe': {
         title: 'Load Vulnerability Manager Plus iFrame in ServiceDesk Plus',
-        description: 'Embed the Vulnerability Manager Plus console inside ServiceDesk Plus for unified access without switching between consoles.',
         content: `
             <h3>Description</h3>
             <p>This feature embeds the full <strong>Vulnerability Manager Plus</strong> web console inside <strong>ServiceDesk Plus</strong> as an iFrame. Technicians can access Vulnerability Manager Plus features without leaving the ServiceDesk Plus interface, reducing context-switching and improving productivity.</p>
@@ -54283,7 +52883,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-sdp-inventory-sync': {
         title: 'Inventory Asset Sync – Vulnerability Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Vulnerability Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -54325,7 +52924,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-sdp-op-inventory-sync': {
         title: 'Inventory Asset Sync – Vulnerability Manager Plus → ServiceDesk Plus',
-        description: 'Synchronizes hardware and software inventory data from Vulnerability Manager Plus to ServiceDesk Plus, keeping asset records up to date.',
         content: `
             <h3>Description</h3>
             <p>This feature pushes comprehensive hardware and software inventory details from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceDesk Plus</strong>. It eliminates manual data entry and ensures that technicians always see the latest asset information when handling tickets or performing audits.</p>
@@ -54367,7 +52965,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-sdp-remote-control': {
         title: 'Remote Control from ServiceDesk Plus Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a ServiceDesk Plus ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>ServiceDesk Plus</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -54409,7 +53006,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-sdp-ssp-beta': {
         title: 'Self-Service Portal Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'Requests raised by end users via the Vulnerability Manager Plus Self-Service Portal are created as ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>End users can submit software and service requests through the <strong>Vulnerability Manager Plus Self-Service Portal (SSP)</strong>. When this feature is enabled, these requests are automatically forwarded to <strong>ServiceDesk Plus</strong> as tickets. Technicians can then process the request through the standard ServiceDesk Plus ticket workflow.</p>
@@ -54449,7 +53045,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-sdp-tools-action': {
         title: 'Perform Tools Action from ServiceDesk Plus Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from ServiceDesk Plus tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>ServiceDesk Plus</strong> tickets.</p>
@@ -54488,7 +53083,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-sdp-trayicon-beta': {
         title: 'Trayicon Requests as ServiceDesk Plus Tickets (Beta)',
-        description: 'End-user requests submitted via the Vulnerability Manager Plus system tray icon are automatically created as tickets in ServiceDesk Plus.',
         content: `
             <h3>Description</h3>
             <p>When an end user right-clicks the <strong>Vulnerability Manager Plus agent tray icon</strong> on their desktop and submits a request (e.g., software installation, hardware issue), a ticket is automatically created in <strong>ServiceDesk Plus</strong>. This bridges the gap between the endpoint agent and the helpdesk, ensuring end-user requests are captured without manual intervention.</p>
@@ -54527,7 +53121,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-snow-basic-asset-post': {
         title: 'Asset Data Post to ServiceNow – Vulnerability Manager Plus',
-        description: 'Posts hardware and software asset data from Vulnerability Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Vulnerability Manager Plus agent.</p>
@@ -54567,7 +53160,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-snow-basic-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Vulnerability Manager Plus',
-        description: 'When a device is removed from Vulnerability Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Vulnerability Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -54603,7 +53195,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-snow-basic-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Vulnerability Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -54642,7 +53233,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-snow-sgc-asset-post': {
         title: 'Asset Data Post to ServiceNow – Vulnerability Manager Plus',
-        description: 'Posts hardware and software asset data from Vulnerability Manager Plus to ServiceNow CMDB.',
         content: `
             <h3>Description</h3>
             <p>This feature posts <strong>asset inventory data</strong> (hardware and software) from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceNow's CMDB</strong>. It keeps the ServiceNow asset database accurate and current by syncing data discovered by the Vulnerability Manager Plus agent.</p>
@@ -54682,7 +53272,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-snow-sgc-asset-removal': {
         title: 'Asset Removal Sync to ServiceNow – Vulnerability Manager Plus',
-        description: 'When a device is removed from Vulnerability Manager Plus SoM, the corresponding ServiceNow CI is updated or removed.',
         content: `
             <h3>Description</h3>
             <p>When a device is removed from the <strong>Scope of Management (SoM)</strong> in <strong>Vulnerability Manager Plus</strong>, this feature updates or removes the corresponding <strong>Configuration Item (CI)</strong> in <strong>ServiceNow's CMDB</strong>. This keeps the CMDB clean by removing stale entries for decommissioned devices.</p>
@@ -54718,7 +53307,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-snow-sgc-owner-assign': {
         title: 'Auto-Assign Last Logged-In User as Asset Owner',
-        description: 'Automatically assign the last logged-in user of a device as the asset owner in ServiceNow.',
         content: `
             <h3>Description</h3>
             <p>This feature automatically maps the <strong>last logged-in user</strong> detected by the Vulnerability Manager Plus agent to the corresponding asset in <strong>ServiceNow</strong>, setting them as the asset owner. This helps keep the asset-owner mapping current without manual updates.</p>
@@ -54757,7 +53345,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-snow-sgc-software-deploy': {
         title: 'Deploy Software from ServiceNow Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from ServiceNow tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>ServiceNow</strong> ticket without switching to the Vulnerability Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -54798,7 +53385,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-snow-sgc-software-metering': {
         title: 'Software Metering Data to ServiceNow – Vulnerability Manager Plus',
-        description: 'Posts software metering (usage) data from Vulnerability Manager Plus to ServiceNow for license optimization.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>software metering data</strong> — which tracks how frequently and recently installed software is used — from <strong>Vulnerability Manager Plus</strong> to <strong>ServiceNow</strong>. This data helps organizations optimize software licenses by identifying unused or underused software.</p>
@@ -54836,7 +53422,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-splunk-audit-logs': {
         title: 'Audit Log Sync to Splunk – Vulnerability Manager Plus',
-        description: 'Forwards action log/audit data from Vulnerability Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Vulnerability Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Vulnerability Manager Plus.</p>
@@ -54876,7 +53461,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-splunk-op-audit-logs': {
         title: 'Audit Log Sync to Splunk – Vulnerability Manager Plus',
-        description: 'Forwards action log/audit data from Vulnerability Manager Plus to Splunk for centralized SIEM analysis.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>Action Log Viewer (audit log)</strong> data from <strong>Vulnerability Manager Plus</strong> to <strong>Splunk</strong>. Security teams can use Splunk's correlation and alerting to monitor administrative actions, configuration changes, and user activities captured by Vulnerability Manager Plus.</p>
@@ -54916,7 +53500,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-splunk-op-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Vulnerability Manager Plus',
-        description: 'Syncs vulnerability scan data from Vulnerability Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -54953,7 +53536,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-splunk-vuln-data': {
         title: 'Vulnerability Data Sync to Splunk – Vulnerability Manager Plus',
-        description: 'Syncs vulnerability scan data from Vulnerability Manager Plus to Splunk for SIEM analysis and dashboards.',
         content: `
             <h3>Description</h3>
             <p>This feature sends <strong>vulnerability scan results</strong> from <strong>Vulnerability Manager Plus</strong> to <strong>Splunk</strong>, enabling security teams to build dashboards, alerts, and correlation rules based on endpoint vulnerability data.</p>
@@ -54990,7 +53572,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-zendesk-deploy-software': {
         title: 'Deploy Software from Zendesk Tickets',
-        description: 'Deploy pre-configured software packages to endpoints directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can deploy software to one or more endpoints directly from a <strong>Zendesk</strong> ticket without switching to the Vulnerability Manager Plus console. This speeds up ticket resolution for software-related requests.</p>
@@ -55031,7 +53612,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-zendesk-power-options': {
         title: 'Remote Power Options from Zendesk Tickets',
-        description: 'Perform remote power actions (lock, hibernate, shutdown, Wake-on-LAN) on endpoints from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>Technicians can remotely execute <strong>power management actions</strong> — such as lock, hibernate, shutdown, restart, and Wake-on-LAN — on managed endpoints directly from <strong>Zendesk</strong> tickets.</p>
@@ -55069,7 +53649,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-zendesk-remote-control': {
         title: 'Remote Control from Zendesk Tickets',
-        description: 'Initiate a remote desktop session on a managed endpoint directly from a Zendesk ticket.',
         content: `
             <h3>Description</h3>
             <p>This feature allows technicians to launch a remote desktop connection to any managed endpoint directly from within <strong>Zendesk</strong>. Instead of switching between consoles, technicians can resolve issues faster by accessing the machine while viewing the ticket.</p>
@@ -55111,7 +53690,6 @@ const FEATURE_DETAILS = {
     },
     'vmp-zendesk-system-tools': {
         title: 'Perform Tools Action from Zendesk Tickets',
-        description: 'Execute system management tools (shutdown, restart, command prompt, etc.) on an endpoint directly from Zendesk tickets.',
         content: `
             <h3>Description</h3>
             <p>This feature lets technicians perform commonly used system management actions on a managed endpoint — such as shutdown, restart, wake-on-LAN, command prompt, registry editor, and task manager — directly from within <strong>Zendesk</strong> tickets.</p>
