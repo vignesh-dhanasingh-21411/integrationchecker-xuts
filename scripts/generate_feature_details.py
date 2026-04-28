@@ -1702,9 +1702,11 @@ def main():
             links_section = '[]'
 
         escaped_title = title.replace("'", "\\'")
+        escaped_desc = description.replace("'", "\\'")
         entry = (
             f"    '{fid}': {{\n"
             f"        title: '{escaped_title}',\n"
+            f"        description: '{escaped_desc}',\n"
             f"        content: `{content}\n"
             f"        `,\n"
             f"        links: {links_section}\n"
@@ -1722,13 +1724,14 @@ def main():
  *
  *  Each entry has:
  *    title       : Display title on the detail page
+ *    description : Short summary shown under the title
  *    content     : HTML string with full explanation
  *    links       : [ {{ title: '...', url: '...' }}, ... ]
  *
  *  HOW TO ADD A FEATURE DETAIL PAGE:
  *  1. Copy an existing entry as a template.
  *  2. Set the key to match the feature id from integrations.js.
- *  3. Fill in the three fields above.
+ *  3. Fill in the four fields above.
  *  4. Save and refresh.
  *
  *  Features WITHOUT a matching entry here will show
