@@ -611,3 +611,25 @@ body {
         padding: 25px;
     }
 }
+
+/* ── Flowchart image styles ──────────────────────────────── */
+.flowchart-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.flowchart-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flowchart-placeholder {
+    color: #999;
+    font-style: italic;
+    padding: 40px 20px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
