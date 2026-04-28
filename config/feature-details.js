@@ -20732,14 +20732,12 @@ const FEATURE_DETAILS = {
             <ul>
                 <li>Integration between Endpoint Central and ServiceDesk Plus must be active.</li>
                 <li>The asset must have been synced to ServiceDesk Plus previously via inventory sync.</li>
-                <li>The technician performing the removal must have appropriate permissions.</li>
             </ul>
 
             <h3>Known Limitations</h3>
             <ul>
                 <li>If the integration is down at the time of removal, the action will not be retroactively applied when connectivity resumes.</li>
-                <li>Bulk removals may take time to process depending on the number of assets.</li>
-                <li>This feature is in <strong>Beta</strong> — behavior may change in future releases.</li>
+                <li>In older builds, this feature may not work effectively for Linux machines due to domain mismatch</li>
             </ul>
 
             <h3>Logs for Troubleshooting</h3>
@@ -20832,7 +20830,7 @@ const FEATURE_DETAILS = {
 
             <h3>How This Works</h3>
             <div class="flowchart-container">
-                <p class="flowchart-placeholder">Flowchart image will be added here.</p>
+                <img src="images/Flowchart Whiteboard in Bright Green Lime Green Pink Corporate Neon Style.png" alt="Asset Sync Diagram" style="max-width:100%; border-radius:8px; margin:15px 0;" />
             </div>
 
             
@@ -21089,7 +21087,7 @@ const FEATURE_DETAILS = {
 
             <h3>How This Works</h3>
             <div class="flowchart-container">
-                <p class="flowchart-placeholder">Flowchart image will be added here.</p>
+                <img src="images/Flowchart Whiteboard in Bright Green Lime Green Pink Corporate Neon Style.png" alt="Asset Sync Diagram" style="max-width:100%; border-radius:8px; margin:15px 0;" />
             </div>
 
             
