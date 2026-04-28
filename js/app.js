@@ -241,7 +241,6 @@ function showFeatureDetail(featureId) {
         <button class="back-button" onclick="goBackToResults()">Back to Integration</button>
         <span class="feature-badge">Feature Details</span>
         <h2>${feature.title}</h2>
-        <p style="font-size:1.15rem;color:#666;margin-bottom:30px;">${feature.description}</p>
         <div class="feature-content">${feature.content}</div>
         ${resourceHTML}`;
 

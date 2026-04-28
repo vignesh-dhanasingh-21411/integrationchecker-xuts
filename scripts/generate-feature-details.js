@@ -1820,7 +1820,6 @@ let output = `/**
  *
  *  Each entry has:
  *    title       : Display title on the detail page
- *    description : Short summary shown under the title
  *    content     : HTML string with full explanation
  *    links       : [ { title: '...', url: '...' }, ... ]
  * ============================================================
@@ -1847,7 +1846,6 @@ for (const [id, name] of features) {
 
     entries.push(`    '${id}': {
         title: '${entry.title.replace(/'/g, "\\'")}',
-        description: '${entry.description.replace(/'/g, "\\'")}',
         content: \`${content}\`,
         links: ${linksStr}
     }`);
