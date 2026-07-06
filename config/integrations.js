@@ -1845,7 +1845,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'browser-security-plus-onprem_servicedesk-plus-onprem': {
-        supported: false,
+        supported: true,
         features: [
             { 
                 name: 'Inventory asset data sync',
@@ -3343,10 +3343,10 @@ const INTEGRATIONS = {
         ]
     },
     'endpoint-central-cloud_qualys-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-cloud_rapid7-insightvm-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-cloud_rapid7-insightvm-onprem': {
         supported: false
@@ -3493,10 +3493,10 @@ const INTEGRATIONS = {
         ]
     },
     'endpoint-central-cloud_tenable-sc-onprem': {
-        supported: false
+        supported: true
     },
     'endpoint-central-cloud_tenable-vm-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-cloud_zendesk-cloud': {
         supported: true,
@@ -3543,7 +3543,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'endpoint-central-msp-cloud_connectwise-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-msp-cloud_crowdstrike-cloud': {
         supported: true
@@ -3555,7 +3555,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'endpoint-central-msp-cloud_halopsa-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-msp-cloud_jira-cloud': {
         supported: false
@@ -3639,7 +3639,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'endpoint-central-msp-onprem_connectwise-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-msp-onprem_crowdstrike-cloud': {
         supported: true
@@ -3651,7 +3651,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'endpoint-central-msp-onprem_halopsa-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-msp-onprem_jira-cloud': {
         supported: false
@@ -3717,7 +3717,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'endpoint-central-msp-onprem_zendesk-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-msp-onprem_zoho-flow-cloud': {
         supported: false
@@ -4080,13 +4080,13 @@ const INTEGRATIONS = {
     
     // Endpoint Central + IBM QRadar Integrations,
     'endpoint-central-onprem_qualys-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-onprem_rapid7-insightvm-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-onprem_rapid7-insightvm-onprem': {
-        supported: false
+        supported: true
     },
     'endpoint-central-onprem_servicedesk-plus-cloud': {
         supported: true,
@@ -4331,10 +4331,10 @@ const INTEGRATIONS = {
 
     // Patch Manager Plus + ServiceDesk Plus Integrations,
     'endpoint-central-onprem_tenable-sc-onprem': {
-        supported: false
+        supported: true
     },
     'endpoint-central-onprem_tenable-vm-cloud': {
-        supported: false
+        supported: true
     },
     'endpoint-central-onprem_zendesk-cloud': {
         supported: true,
@@ -4380,7 +4380,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'endpoint-dlp-onprem_asset-explorer-onprem': {
-        supported: false
+        supported: true
     },
     'endpoint-dlp-onprem_connectwise-cloud': {
         supported: false
@@ -4437,7 +4437,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'endpoint-dlp-onprem_servicedesk-plus-onprem': {
-        supported: false
+        supported: true
     },
     'endpoint-dlp-onprem_servicenow-cloud': {
         supported: false
@@ -4469,7 +4469,7 @@ const INTEGRATIONS = {
 
     // ── Maa Integrations ──────────────────────────────────────
     'maa-cloud_analytics-plus-cloud': {
-        supported: false
+        supported: true
     },
     'maa-cloud_analytics-plus-onprem': {
         supported: false
@@ -4484,7 +4484,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'maa-cloud_crowdstrike-cloud': {
-        supported: false
+        supported: true
     },
     'maa-cloud_freshdesk-cloud': {
         supported: false
@@ -4511,22 +4511,22 @@ const INTEGRATIONS = {
         supported: false
     },
     'maa-cloud_powerbi-cloud': {
-        supported: false
+        supported: true
     },
     'maa-cloud_powerbi-onprem': {
         supported: false
     },
     'maa-cloud_qualys-cloud': {
-        supported: false
+        supported: true
     },
     'maa-cloud_rapid7-insightvm-cloud': {
-        supported: false
+        supported: true
     },
     'maa-cloud_rapid7-insightvm-onprem': {
         supported: false
     },
     'maa-cloud_servicedesk-plus-cloud': {
-        supported: false
+        supported: true
     },
     'maa-cloud_servicedesk-plus-msp-cloud': {
         supported: false
@@ -4538,7 +4538,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'maa-cloud_servicenow-cloud': {
-        supported: false
+        supported: true
     },
     'maa-cloud_servicenow-onprem': {
         supported: false
@@ -4547,7 +4547,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'maa-cloud_splunk-onprem': {
-        supported: false
+        supported: true
     },
     'maa-cloud_syslog-siem-onprem': {
         supported: false
@@ -4556,13 +4556,13 @@ const INTEGRATIONS = {
         supported: false
     },
     'maa-cloud_tenable-vm-cloud': {
-        supported: false
+        supported: true
     },
     'maa-cloud_zendesk-cloud': {
         supported: false
     },
     'maa-cloud_zoho-flow-cloud': {
-        supported: false
+        supported: true
     },
 
     // ── Mobile Device Manager Integrations ──────────────────────────────────────
@@ -4976,6 +4976,21 @@ const INTEGRATIONS = {
     },
     'mobile-device-manager-cloud_zoho-flow-cloud': {
         supported: false
+    },
+    'endpoint-central-cloud_mobile-device-manager-cloud': {
+        supported: true
+    },
+    'endpoint-central-msp-cloud_mobile-device-manager-cloud': {
+        supported: true
+    },
+    'summary-server-cloud_mobile-device-manager-cloud': {
+        supported: true
+    },
+    'probe-cloud_mobile-device-manager-cloud': {
+        supported: true
+    },
+    'maa-cloud_mobile-device-manager-cloud': {
+        supported: true
     },
     'mobile-device-manager-onprem_analytics-plus-cloud': {
         supported: true,
@@ -5665,7 +5680,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'mpp-onprem_log360-onprem': {
-        supported: false
+        supported: true
     },
     'mpp-onprem_pam360-cloud': {
         supported: false
@@ -5713,7 +5728,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'mpp-onprem_syslog-siem-onprem': {
-        supported: false
+        supported: true
     },
     'mpp-onprem_tenable-sc-onprem': {
         supported: false
@@ -5830,7 +5845,7 @@ const INTEGRATIONS = {
         supported: true
     },
     'patch-manager-plus-cloud_crowdstrike-cloud': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-cloud_freshdesk-cloud': {
         supported: true
@@ -5968,10 +5983,10 @@ const INTEGRATIONS = {
         ]
     },
     'patch-manager-plus-cloud_qualys-cloud': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-cloud_rapid7-insightvm-cloud': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-cloud_rapid7-insightvm-onprem': {
         supported: false
@@ -6108,7 +6123,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'patch-manager-plus-cloud_tenable-vm-cloud': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-cloud_zendesk-cloud': {
         supported: true,
@@ -6319,7 +6334,7 @@ const INTEGRATIONS = {
         supported: true
     },
     'patch-manager-plus-onprem_crowdstrike-cloud': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-onprem_freshdesk-cloud': {
         supported: true
@@ -6496,13 +6511,13 @@ const INTEGRATIONS = {
     
     // Patch Manager Plus + IBM QRadar Integrations,
     'patch-manager-plus-onprem_qualys-cloud': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-onprem_rapid7-insightvm-cloud': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-onprem_rapid7-insightvm-onprem': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-onprem_servicedesk-plus-cloud': {
         supported: true,
@@ -6731,10 +6746,10 @@ const INTEGRATIONS = {
 
     // Remote Access Plus + ServiceDesk Plus Integrations,
     'patch-manager-plus-onprem_tenable-sc-onprem': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-onprem_tenable-vm-cloud': {
-        supported: false
+        supported: true
     },
     'patch-manager-plus-onprem_zendesk-cloud': {
         supported: true,
@@ -6948,7 +6963,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'probe-onprem_syslog-siem-onprem': {
-        supported: false
+        supported: true
     },
     'probe-onprem_tenable-sc-onprem': {
         supported: false
@@ -7944,7 +7959,7 @@ const INTEGRATIONS = {
         ]
     },
     'remote-access-plus-onprem_syslog-siem-onprem': {
-        supported: false,
+        supported: true,
         features: [
             { 
                 name: 'Action log viewer data (Audit logs) is synced from RAP to Syslog/SIEM',
@@ -8087,7 +8102,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'rpp-onprem_syslog-siem-onprem': {
-        supported: false
+        supported: true
     },
     'rpp-onprem_tenable-sc-onprem': {
         supported: false
@@ -8119,7 +8134,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'summary-server-cloud_crowdstrike-cloud': {
-        supported: false
+        supported: true
     },
     'summary-server-cloud_freshdesk-cloud': {
         supported: false
@@ -8161,7 +8176,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'summary-server-cloud_servicedesk-plus-cloud': {
-        supported: false
+        supported: true
     },
     'summary-server-cloud_servicedesk-plus-msp-cloud': {
         supported: false
@@ -8173,7 +8188,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'summary-server-cloud_servicenow-cloud': {
-        supported: false
+        supported: true
     },
     'summary-server-cloud_servicenow-onprem': {
         supported: false
@@ -8215,7 +8230,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'summary-server-onprem_crowdstrike-cloud': {
-        supported: false
+        supported: true
     },
     'summary-server-onprem_freshdesk-cloud': {
         supported: false
@@ -8266,10 +8281,10 @@ const INTEGRATIONS = {
         supported: false
     },
     'summary-server-onprem_servicedesk-plus-onprem': {
-        supported: false
+        supported: true
     },
     'summary-server-onprem_servicenow-cloud': {
-        supported: false
+        supported: true
     },
     'summary-server-onprem_servicenow-onprem': {
         supported: false
@@ -8284,7 +8299,7 @@ const INTEGRATIONS = {
         supported: false
     },
     'summary-server-onprem_tenable-sc-onprem': {
-        supported: false
+        supported: true
     },
     'summary-server-onprem_tenable-vm-cloud': {
         supported: false
