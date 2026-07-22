@@ -3202,7 +3202,7 @@ const INTEGRATIONS = {
         ]
     },
     'endpoint-central-cloud_connectwise-cloud': {
-        supported: true
+        supported: false
     },
     'endpoint-central-cloud_crowdstrike-cloud': {
         supported: true
@@ -3900,7 +3900,7 @@ const INTEGRATIONS = {
     
     // Endpoint Central + Event Log Analyzer / Log 360 Integrations,
     'endpoint-central-onprem_connectwise-cloud': {
-        supported: true
+        supported: false
     },
     'endpoint-central-onprem_crowdstrike-cloud': {
         supported: true
